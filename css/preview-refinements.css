@@ -31,3 +31,50 @@ main dt { font-weight: 700; }
 .works .works__dialog-category { font-size: 14px; }
 
 .works .works__dialog-description { font-size: 20px; }
+
+/* Use a drawn mark so mobile platforms never substitute an emoji glyph. */
+.hero__spark img, .about__spark img { display: block; width: 1em; height: 1em; }
+@media (max-width: 768px) {
+  /* Keep long mobile sections in document flow instead of stacking them. */
+  .stacked-sections main > section { position: relative; top: auto; border-radius: 0; box-shadow: none; }
+  :root { --page-gutter: 20px; --section-space: 48px; }
+  .section-menu { gap: 8px; padding-inline: 16px; min-height: 52px; }
+  .section-menu a { font-size: 11px; min-height: 44px; white-space: nowrap; }
+  .works__intro { margin: 0 0 24px; }
+  .works__intro h2, .web-projects__intro h2 { font-size: 30px; }
+  .works__intro-aside { margin-top: 12px; }
+  .works__intro-aside > p, .web-projects__intro p { font-size: 14px; line-height: 1.65; }
+  .works__toolbar { gap: 16px; }
+  .works__filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; gap: 8px; }
+  .works .works__filters button { justify-content: center; padding: 10px 12px; min-height: 44px; font-size: 13px; }
+  .works__gallery-controls { margin: 0; width: 100%; gap: 10px; }
+  .works__gallery-controls button { min-height: 44px; font-size: 12px; }
+  .works__gallery-buttons button { width: 44px; }
+  .works__gallery-position { font-size: 12px; }
+  .works__dialog { height: min(88svh, 900px); max-height: 88svh; }
+  .works__dialog-toolbar { padding: 16px; }
+  .works__dialog-header { align-items: flex-start; gap: 12px; }
+  .works__dialog-header h3 { font-size: 18px; line-height: 1.4; }
+  .works .works__dialog-category { font-size: 12px; margin-bottom: 6px; }
+  .works .works__dialog-description { font-size: 16px; line-height: 1.65; margin: 20px 0 0; }
+  .works__dialog-body { display: block; padding: 16px; scrollbar-gutter: auto; }
+  .works__image-stage { height: auto; }
+  .works__full { width: 100%; height: auto; max-height: 50svh; object-fit: contain; }
+  .works__dialog[data-category="detail"] .works__full { max-height: none; }
+  .works__close, .works__previous, .works__next { min-height: 44px; font-size: 14px; }
+  .works__dialog-navigation { padding: 12px 16px; gap: 8px; }
+  .works__position { font-size: 12px; }
+  .project-showcase { --project-intro-heading-size: 18px; gap: 24px; padding-block: 0 40px; }
+  .project-showcase + .project-showcase { padding-top: 40px; border-top: 1px solid #68181820; }
+  .project-showcase__brand { font-size: 30px; margin-bottom: 16px; }
+  .project-showcase__type { font-size: 12px; margin-bottom: 12px; }
+  .project-showcase__tagline { margin-bottom: 16px; }
+  .project-showcase__description { line-height: 1.7; }
+  .project-showcase__meta { margin-top: 20px; font-size: 13px; }
+  .project-showcase__meta div { grid-template-columns: 64px minmax(0, 1fr); gap: 12px; }
+  .project-showcase__actions { margin-top: 20px; gap: 8px; }
+  .project-showcase__actions a { min-height: 44px; padding: 10px 16px; font-size: 14px; }
+  .project-page-buttons { display: flex; flex-wrap: nowrap; overflow-x: auto; width: 100%; padding-bottom: 6px; scrollbar-width: none; }
+  .project-page-buttons button { flex-shrink: 0; font-size: 12px; min-height: 44px; padding: 10px 14px; }
+  .project-page-picker { min-width: 0; }
+}

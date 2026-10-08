@@ -5,16 +5,16 @@
 @media (prefers-reduced-motion: no-preference) {
   .stacked-sections main > section { position: sticky; top: var(--sheet-top, 0px); z-index: var(--sheet-order, 1); }
   .stacked-sections main > section:not(.hero) { min-height: calc(100svh - 3.15rem); border-radius: 1.5rem 1.5rem 0 0; box-shadow: 0 -1.2rem 3rem -.9rem #24131324; }
-  .landing-curtain { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; background: var(--color-ink); color: var(--color-cream); pointer-events: none; animation: curtain-open 1.2s cubic-bezier(.76,0,.24,1) both; }
-  .landing-curtain span { font-size: clamp(1rem, 3vw, 2rem); font-weight: 700; letter-spacing: .04em; animation: curtain-label .8s ease both; }
+  .landing-curtain { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; background: var(--color-ink); color: var(--color-cream); pointer-events: none; animation: curtain-open 1.2s cubic-bezier(.76,0,.24,1) 2s both; }
+  .landing-curtain span { font-size: clamp(1rem, 3vw, 2rem); font-weight: 700; letter-spacing: .04em; animation: curtain-label 2.8s ease both; }
   @keyframes curtain-open {
-    0%, 18% { transform: translateY(0); border-radius: 0; }
+    0% { transform: translateY(0); border-radius: 0; }
     70% { border-radius: 0 0 12vw 12vw; }
     100% { transform: translateY(-105%); border-radius: 0 0 12vw 12vw; }
   }
   @keyframes curtain-label {
     0% { opacity: 0; transform: translateY(.6rem); }
-    30%, 65% { opacity: 1; transform: none; }
+    12%, 78% { opacity: 1; transform: none; }
     100% { opacity: 0; transform: translateY(-.6rem); }
   }
   .scroll-motion .about { overflow-x: clip; }

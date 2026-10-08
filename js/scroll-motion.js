@@ -114,7 +114,7 @@
     label.textContent = 'HYEONA’S PORTFOLIO';
     intro.append(label);
     document.body.append(intro);
-    hero?.style.setProperty('--hero-entry-delay', '.55s');
+    hero?.style.setProperty('--hero-entry-delay', '2.55s');
     document.documentElement.classList.add('landing-opening');
     const finishIntro = () => {
       intro?.remove();
@@ -123,7 +123,7 @@
     intro.addEventListener('animationend', (event) => {
       if (event.target === intro) finishIntro();
     });
-    setTimeout(finishIntro, 1600);
+    setTimeout(finishIntro, 3600);
   }
   let frame = 0;
   const paint = () => {
