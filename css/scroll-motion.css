@@ -1,0 +1,63 @@
+.hero__elastic-word { white-space: nowrap; }
+.hero__letter { display: inline-block; transform-origin: 50% 85%; }
+.section-scroll-anchor { height: 0; pointer-events: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .stacked-sections main > section { position: sticky; top: var(--sheet-top, 0px); z-index: var(--sheet-order, 1); }
+  .stacked-sections main > section:not(.hero) { min-height: calc(100svh - 3.15rem); border-radius: 1.5rem 1.5rem 0 0; box-shadow: 0 -1.2rem 3rem -.9rem #24131324; }
+  .landing-curtain { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; background: var(--color-ink); color: var(--color-cream); pointer-events: none; animation: curtain-open 1.2s cubic-bezier(.76,0,.24,1) both; }
+  .landing-curtain span { font-size: clamp(1rem, 3vw, 2rem); font-weight: 700; letter-spacing: .04em; animation: curtain-label .8s ease both; }
+  @keyframes curtain-open {
+    0%, 18% { transform: translateY(0); border-radius: 0; }
+    70% { border-radius: 0 0 12vw 12vw; }
+    100% { transform: translateY(-105%); border-radius: 0 0 12vw 12vw; }
+  }
+  @keyframes curtain-label {
+    0% { opacity: 0; transform: translateY(.6rem); }
+    30%, 65% { opacity: 1; transform: none; }
+    100% { opacity: 0; transform: translateY(-.6rem); }
+  }
+  .scroll-motion .about { overflow-x: clip; }
+  .scroll-motion [data-motion] {
+    opacity: 0;
+    translate: 0 1.15rem;
+    transition: opacity .7s ease, translate .85s cubic-bezier(.2,.7,.2,1);
+    transition-delay: var(--motion-delay, 0ms);
+  }
+  .scroll-motion [data-motion].motion-entered { opacity: 1; translate: 0 0; }
+  .scroll-motion [data-motion="portrait"] { translate: 0 0; clip-path: inset(0 0 14% 0 round 8rem 8rem 0 0); transition: opacity .8s ease, clip-path 1.1s cubic-bezier(.2,.7,.2,1); }
+  .scroll-motion [data-motion="portrait"].motion-entered { clip-path: inset(0 0 0 0 round 8rem 8rem 0 0); }
+  .scroll-motion .about__photo img { transform: scale(calc(1.07 - var(--scroll-progress, 0) * .07)); }
+  .scroll-motion .about__spark { transform: rotate(calc(12deg + var(--scroll-progress, 0) * 65deg)); }
+  .scroll-motion [data-motion="tool"] { translate: 0 1.4rem; }
+  .scroll-motion [data-motion="tool"].motion-entered { translate: 0 0; }
+  .scroll-motion [data-motion="tool"].motion-entered .tools__icon { animation: tool-pop .8s both; animation-delay: var(--motion-delay, 0ms); }
+  .scroll-motion [data-motion="gallery"] { translate: 0 1.8rem; transition-duration: .9s, 1.1s; }
+  .scroll-motion [data-motion="gallery"].motion-entered { translate: 0 0; }
+  .scroll-motion [data-motion="rule"] { position: relative; opacity: 1; translate: none; border-top-color: transparent; }
+  .scroll-motion [data-motion="rule"]::before { content: ''; position: absolute; top: -1px; left: 0; right: 0; height: 1px; background: currentColor; opacity: .65; transform: scaleX(0); transform-origin: left; transition: transform 1s cubic-bezier(.2,.7,.2,1); }
+  .scroll-motion [data-motion="rule"].motion-entered::before { transform: scaleX(1); }
+  .scroll-motion .contact__title span { position: relative; display: inline-block; }
+  .scroll-motion .contact__title span::after { content: ''; position: absolute; left: 0; right: 0; bottom: -.1em; height: .025em; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .8s .45s cubic-bezier(.2,.7,.2,1); }
+  .scroll-motion .contact__title.motion-entered span::after { transform: scaleX(1); }
+  .scroll-motion .hero-bouncing .hero__letter { animation: elastic-letter 1.15s both; animation-delay: calc(var(--hero-entry-delay, 0s) + var(--letter-index) * 45ms); }
+  @keyframes elastic-letter {
+    0% { opacity: 0; transform: translateY(.3em) scaleY(.6); }
+    35% { opacity: 1; transform: translateY(-.065em) scaleY(1.16); }
+    56% { transform: translateY(.025em) scaleY(.91); }
+    74% { transform: translateY(-.012em) scaleY(1.045); }
+    88% { transform: scaleY(.99); }
+    100% { opacity: 1; transform: none; }
+  }
+  @keyframes tool-pop {
+    0% { transform: scale(.88) rotate(-5deg); }
+    45% { transform: scale(1.07) rotate(2deg); }
+    75% { transform: scale(.985); }
+    100% { transform: none; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-motion] { opacity: 1; translate: none; clip-path: none; }
+  .hero__letter { animation: none; transform: none; }
+}
