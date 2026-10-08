@@ -2,8 +2,6 @@ document.querySelectorAll('.project-screen-slider').forEach(slider => {
   const buttons = [...slider.querySelectorAll('[data-screen-url]')];
   const frame = slider.querySelector('iframe');
   const viewport = slider.querySelector('.project-screen-slider__viewport');
-  const external = slider.querySelector('[data-screen-external]');
-  const status = slider.querySelector('[data-screen-status]');
   let selected = 0;
   function resize() {
     const mobile = matchMedia('(max-width: 768px)').matches;
@@ -18,17 +16,12 @@ document.querySelectorAll('.project-screen-slider').forEach(slider => {
     const changed = index !== selected;
     selected = index;
     buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === selected)));
-    external.href = buttons[selected].dataset.screenUrl;
     frame.title = `${slider.dataset.projectName} ${buttons[selected].textContent} 실제 웹 화면`;
     if (changed) {
-      slider.classList.add('is-loading');
-      status.textContent = `${buttons[selected].textContent} 화면`;
       frame.src = buttons[selected].dataset.screenUrl;
     }
   }
   frame.addEventListener('load', () => {
-    slider.classList.remove('is-loading');
-    status.textContent = `${buttons[selected].textContent} 화면`;
     resize();
   });
   buttons.forEach((button, index) => button.addEventListener('click', () => select(index)));
