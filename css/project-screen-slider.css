@@ -1,0 +1,22 @@
+.project-screen-slider { margin-block: 0 30px; }
+.project-screen-slider__toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 20px; }
+.project-screen-slider__pages { display: flex; flex-wrap: wrap; gap: 10px; }
+.project-screen-slider button { font: inherit; font-size: 14px; line-height: 1.4; color: inherit; background: transparent; border: 1px solid #68181840; padding: 12px 20px; border-radius: 30px; cursor: pointer; }
+.project-screen-slider__pages button[aria-pressed="true"] { background: #681818; border-color: #681818; color: #fff8e8; }
+.project-screen-slider button:focus-visible { outline: 2px solid #681818; outline-offset: 4px; }
+.project-screen-slider button:disabled { opacity: .35; cursor: default; }
+.project-screen-slider__browser { border: 1px solid #68181825; border-radius: 10px; overflow: hidden; background: #fff; }
+.project-screen-slider__bar { display: flex; align-items: center; gap: 6px; padding: 13px 18px; background: #f4ecde; }
+.project-screen-slider__bar i { width: 7px; height: 7px; border-radius: 50%; background: #b4a89b; }
+.project-screen-slider__bar span { margin-left: auto; font-size: 12px; color: #8a4c43; }
+.project-screen-slider__viewport { position: relative; height: clamp(480px, 72vh, 900px); overflow: hidden; background: #fff; }
+.project-screen-slider iframe { position: absolute; top: 0; left: 0; border: 0; transform-origin: top left; background: #fff; }
+.project-screen-slider__footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-top: 16px; }
+.project-screen-slider__footer p, .project-screen-slider__footer a { font-size: 14px; line-height: 1.6; }
+.project-screen-slider.is-loading [data-screen-status] { color: #8a4c43; }
+@media(max-width:768px) {
+ .project-screen-slider__toolbar { gap: 14px; }
+ .project-screen-slider__pages { gap: 8px; }
+ .project-screen-slider__pages button { padding: 10px 14px; }
+ .project-screen-slider__viewport { height: min(72svh, 700px); min-height: 380px; }
+}
