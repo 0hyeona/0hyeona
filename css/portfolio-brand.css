@@ -1,5 +1,0 @@
-@media(hover:hover) and (pointer:fine) {
- html, body, body * { cursor: url("../assets/images/brand/portfolio-cursor.svg") 16 16, auto !important; }
- a, button, [role="button"], a *, button * { cursor: url("../assets/images/brand/portfolio-cursor.svg") 16 16, pointer !important; }
- input, textarea, [contenteditable="true"] { cursor: text !important; }
-}
