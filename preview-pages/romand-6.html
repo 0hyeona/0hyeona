@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<base href="https://romand-alpha.vercel.app/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 | rom&amp;nd</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/btn-top.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/login.css?v=4">
+
+    <script src="./js/header.js" defer></script>
+    <script src="./js/btn-top.js" defer></script>
+    <script src="./js/login.js?v=2" defer></script>
+
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+<style>html,body{overflow:auto!important;scroll-behavior:auto!important}.modal,.popup,.main-popup{display:none!important}</style></head>
+
+<body>
+    <!-- 기존 데스크탑 헤더 -->
+    <header class="pc">
+        <div class="header-top">
+            <div class="common-frame back">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./img/logo.svg" alt="롬앤 메인 로고">
+                    </a>
+                </div>
+                <div class="user-menu">
+                    <div class="lnb">
+                        <div class="search-box" aria-label="검색창">
+                            <label class="search-field" aria-label="검색어 입력">
+                                <input type="text" placeholder="검색어를 입력해주세요">
+                            </label>
+                            <button class="search-toggle" type="button" aria-label="검색 열기">
+                                <img src="./img/icon-search.svg" alt="">
+                            </button>
+                        </div>
+                        <a href="./index-4.html">
+                            <img src="./img/icon-cart.svg" alt="장바구니">
+                        </a>
+                        <a href="./index-6.html" aria-current="page">
+                            <img src="./img/icon-profile.svg" alt="로그인">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="header-bottom" aria-label="주 메뉴">
+            <div class="common-frame">
+                <ul class="gnb">
+                    <li><a href="./index.html">ALL</a></li>
+                    <li><a href="./index-2.html">NEW</a></li>
+                    <li><a href="./index-2.html">SHOP</a></li>
+                    <li><a href="./index-2.html">EVENT</a></li>
+                    <li><a href="./index.html">ABOUT US</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 기존 태블릿 / 모바일 헤더 -->
+    <div class="smart-header">
+        <div class="common-frame">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./img/logo.svg" alt="롬앤 메인 로고">
+                </a>
+            </div>
+            <div class="btn-menu">
+                <a href="#" role="button" aria-label="전체 메뉴 열기">
+                    <img src="./img/icon-menubar.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="smart-overlay-menu" aria-label="전체 메뉴">
+        <div class="smart-overlay-menu-1">
+            <div class="common-frame">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./img/logo.svg" alt="롬앤 메인 로고">
+                    </a>
+                </div>
+                <div class="btn-close">
+                    <a href="#" role="button" aria-label="전체 메뉴 닫기">
+                        <img src="./img/icon-close.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="smart-overlay-menu-2">
+            <div class="common-frame">
+                <div class="user-menu">
+                    <div class="search-box" aria-label="검색창">
+                        <label class="search-field" aria-label="검색어 입력">
+                            <input type="text" placeholder="검색어를 입력해주세요">
+                        </label>
+                        <button class="search-toggle" type="button" aria-label="검색 열기">
+                            <img src="./img/icon-search.svg" alt="">
+                        </button>
+                    </div>
+                    <a href="./index-4.html"><img src="./img/icon-cart.svg" alt="장바구니"></a>
+                    <a href="./index-6.html"><img src="./img/icon-profile.svg" alt="로그인"></a>
+                </div>
+            </div>
+        </div>
+        <div class="smart-overlay-menu-top">
+            <div class="common-frame">
+                <ul class="gnb-smart">
+                    <li class="on"><a href="./index-2.html">NEW</a></li>
+                    <li><a href="./index-2.html">SHOP</a></li>
+                    <li><a href="./index-2.html">EVENT</a></li>
+                    <li><a href="./index.html">ABOUT US</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="smart-overlay-menu-bottom">
+            <ul class="gnb-smart-list">
+                <li class="on">
+                    <div class="gnb2depths-smart">
+                        <div class="common-frame">
+                            <section>
+                                <h4><a href="./index-2.html">신상품</a></h4>
+                                <ul><li><a href="./index-2.html">전체 신제품</a></li><li><a href="#">이달의 신제품</a></li></ul>
+                            </section>
+                            <section>
+                                <h4><a href="#">콜라보</a></h4>
+                                <ul><li><a href="#">시즌 컬렉션</a></li><li><a href="#">한정판 에디션</a></li></ul>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gnb2depths-smart">
+                        <div class="common-frame">
+                            <section><h4><a href="./index-2.html">LIP</a></h4><ul><li><a href="#">틴트</a></li><li><a href="#">립스틱</a></li></ul></section>
+                            <section><h4><a href="#">EYE</a></h4><ul><li><a href="#">아이섀도우</a></li><li><a href="#">마스카라</a></li></ul></section>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gnb2depths-smart">
+                        <div class="common-frame">
+                            <section><h4><a href="#">기획전</a></h4><ul><li><a href="#">진행 중인 기획전</a></li><li><a href="#">세일 특가</a></li></ul></section>
+                            <section><h4><a href="#">혜택</a></h4><ul><li><a href="#">쿠폰존</a></li><li><a href="#">출석체크</a></li></ul></section>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gnb2depths-smart">
+                        <div class="common-frame">
+                            <section><h4><a href="#">브랜드 소개</a></h4><ul><li><a href="#">브랜드 컬러</a></li><li><a href="#">매장 안내</a></li></ul></section>
+                            <section><h4><a href="#">고객 지원</a></h4><ul><li><a href="#">공지사항</a></li><li><a href="#">FAQ</a></li></ul></section>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="login-page">
+        <div class="login-layout">
+            <section class="login-card" aria-labelledby="login-title">
+                <h1 id="login-title">LOGIN</h1>
+
+                <div class="login-tabs" role="tablist" aria-label="로그인 방식 선택">
+                    <button class="login-tab is-active" id="member-tab" type="button" role="tab"
+                        aria-selected="true" aria-controls="member-panel" data-panel="member-panel">기존 회원</button>
+                    <button class="login-tab" id="guest-tab" type="button" role="tab"
+                        aria-selected="false" aria-controls="guest-panel" data-panel="guest-panel">비회원 주문조회</button>
+                </div>
+
+                <section class="login-panel is-active" id="member-panel" role="tabpanel" aria-labelledby="member-tab">
+                    <form class="login-form">
+                        <p class="required-copy">필수 항목(*)</p>
+                        <div class="field-list">
+                            <label><span class="blind">아이디 혹은 이메일</span><input type="text" name="member-id" placeholder="아이디 혹은 이메일*" autocomplete="username" required></label>
+                            <label><span class="blind">비밀번호</span><input type="password" name="member-password" placeholder="비밀번호*" autocomplete="current-password" required></label>
+                        </div>
+                        <div class="account-links"><a href="#">아이디 찾기</a><a href="#">비밀번호 찾기</a></div>
+                        <label class="remember"><input type="checkbox" name="remember-member"><span aria-hidden="true"></span>내 정보 기억하기</label>
+                        <button class="primary-button" type="submit">로그인</button>
+                        <a class="signup-button mobile-signup" href="#">회원가입</a>
+                    </form>
+                </section>
+
+                <section class="login-panel" id="guest-panel" role="tabpanel" aria-labelledby="guest-tab" hidden>
+                    <form class="login-form login-form--guest">
+                        <p class="required-copy">필수 항목(*)</p>
+                        <div class="field-list">
+                            <label><span class="blind">주문자명</span><input type="text" name="order-name" placeholder="주문자명*" required></label>
+                            <label><span class="blind">주문번호</span><input type="text" name="order-number" placeholder="주문번호*" inputmode="numeric" required></label>
+                            <label><span class="blind">비회원 주문 비밀번호</span><input type="password" name="order-password" placeholder="비회원 주문 비밀번호*" required></label>
+                        </div>
+                        <div class="account-links guest-account-links"><a href="#">아이디 찾기</a><a href="#">비밀번호 찾기</a></div>
+                        <label class="remember guest-remember"><input type="checkbox" name="remember-guest"><span aria-hidden="true"></span>내 정보 기억하기</label>
+                        <a class="primary-button" href="./index-7.html">비회원 주문조회</a>
+                        <a class="signup-button mobile-signup" href="#">회원가입</a>
+                        <p class="guest-notice">※ 비회원 주문 후 회원가입 시, 기존 주문내역이 자동으로 연동됩니다.</p>
+                    </form>
+                </section>
+
+                <div class="simple-login">
+                    <div class="or-divider"><span>또는</span></div>
+                    <a class="social-button kakao-button" href="#"><img src="./img/kakao.png" alt="">카카오톡 간편 로그인/회원가입</a>
+                    <a class="social-button naver-button" href="#"><strong>N</strong>네이버 간편 로그인/회원가입</a>
+                </div>
+            </section>
+
+            <aside class="signup-panel" aria-labelledby="signup-title">
+                <h2 id="signup-title">SIGN UP</h2>
+                <div class="signup-copy">
+                    <p><strong>지금 회원가입하고 롬메이트 단독 혜택을 받아보세요.</strong></p>
+                    <p>공식몰 회원 가입 시, 모든 주문 무료 배송, 반품이 적용되며<br>선물 포장, 무료 샘플 증정 등 다양한 혜택을 받아 보실 수 있습니다.</p>
+                    <p class="age-copy">※ 만 14세 이상부터 회원가입이 가능합니다.</p>
+                </div>
+                <figure class="phone-verify-art" aria-hidden="true">
+                    <img src="./img/phone.jpg" alt="">
+                </figure>
+                <a class="primary-button phone-button" href="#">핸드폰 인증 후, 회원가입<a>
+            </aside>
+        </div>
+    </main>
+
+    <div class="btn-top" aria-label="화면 상단으로 이동">↑</div>
+
+    <!-- 기존 PC 푸터 -->
+    <footer class="pc">
+        <div class="foot-con1">
+            <figure class="foot-logo"><img src="./img/foot-logo.svg" alt="롬앤 푸터 로고"></figure>
+            <ul class="foot-menu"><li><a href="#">이용약관</a></li><li>|</li><li><a href="#">개인정보처리 방침</a></li><li>|</li><li><a href="#">사업자 정보 확인</a></li></ul>
+            <div class="copy">© 2026 하이파이프팀 포트폴리오 리디자인 사이트입니다.</div>
+        </div>
+        <div class="con-txt">
+            <div class="foot-con2"><ul class="address"><li>주소 <span>서울특별시 강남구 도산대로 328</span></li><li>사업자번호 <span>777-77-77777</span></li></ul></div>
+            <div class="foot-con3"><h4>CUSTOMER CENTER</h4><p>1588-2026</p><ul><li>평일 <span>09:30 - 18:00</span></li><li>점심시간 <span>12:00 - 13:00</span></li><li><span>토·일 공휴일 휴무</span></li></ul></div>
+            <div class="foot-con4"><h4>FOLLOW US</h4><p>인스타그램과 유튜브에서 다양한 소식을 만나보세요.</p><ul class="sns-icon"><li><a href="#"><img src="./img/kakao.png" alt="카카오톡"></a></li><li><a href="#"><img src="./img/youtube.png" alt="유튜브"></a></li><li><a href="#"><img src="./img/instagram.png" alt="인스타그램"></a></li></ul></div>
+        </div>
+    </footer>
+
+    <!-- 기존 태블릿 / 모바일 푸터 -->
+    <div class="pad-footer">
+        <div class="foot-con1">
+            <figure class="foot-logo"><img src="./img/foot-logo.svg" alt="롬앤 푸터 로고"></figure>
+            <ul class="foot-menu"><li><a href="#">이용약관</a></li><li>|</li><li><a href="#">개인정보처리 방침</a></li><li>|</li><li><a href="#">사업자 정보 확인</a></li></ul>
+            <div class="foot-con2"><ul class="address"><li>주소 <span>서울특별시 강남구 도산대로 328</span></li><li>사업자번호 <span>777-77-77777</span></li></ul></div>
+            <div class="copy">© 2026 하이파이프팀 포트폴리오 리디자인 사이트입니다.</div>
+        </div>
+        <div class="foot-con3"><h4>CUSTOMER CENTER</h4><p>1588-2026</p><ul><li>평일 <span>09:30 - 18:00</span></li><li>점심시간 <span>12:00 - 13:00</span></li><li><span>토·일 공휴일 휴무</span></li></ul></div>
+        <div class="foot-con4"><h4>FOLLOW US</h4><p>인스타그램과 유튜브에서 다양한 소식을 만나보세요.</p><ul class="sns-icon"><li><a href="#"><img src="./img/kakao.png" alt="카카오톡"></a></li><li><a href="#"><img src="./img/youtube.png" alt="유튜브"></a></li><li><a href="#"><img src="./img/instagram.png" alt="인스타그램"></a></li></ul></div>
+    </div>
+<script>document.querySelectorAll('.modal,.popup,.main-popup').forEach(node=>node.remove());</script></body>
+
+</html>

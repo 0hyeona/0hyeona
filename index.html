@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071e2b">
+  <title>김현아 — UX/UI Designer & Web Publisher</title>
+  <meta name="description" content="디자인과 개발을 함께 이해하는 UX/UI 디자이너 김현아의 포트폴리오. 웹 디자인, 콘텐츠 디자인, 퍼블리싱 작업을 소개합니다.">
+  <link rel="icon" href="./img/hyeona-favicon.svg?v=2" type="image/svg+xml">
+  <link rel="preload" href="./fonts/Pretendard-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/instrument-serif-1.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./portfolio.css">
+  <script src="./app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#about">본문 바로가기</a>
+  <nav class="floating-nav" id="floating-nav" aria-label="페이지 메뉴">
+    <a href="#home" aria-current="location">Home</a><a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a>
+  </nav>
+  <details class="work-switcher" id="work-switcher" hidden>
+    <summary aria-label="작업 카테고리 선택, 현재 배너" title="작업 카테고리 선택">
+      <svg class="switcher-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+      <span class="visually-hidden" id="work-switcher-current">배너</span>
+    </summary>
+    <nav aria-label="작업 카테고리 선택">
+      <a href="#uxui-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M8 9v11m4-7h6m-6 4h4"/></svg>UX/UI 퍼블리싱 <span>UX/UI</span></a>
+      <a href="#banner-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h6m-6 4h4m6-4h2v4h-2z"/></svg>배너 <span>Banner</span></a>
+      <a href="#popup-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 8h18m-4-3 2 2m0-2-2 2M7 12h10m-10 4h7"/></svg>팝업 <span>Popup</span></a>
+      <a href="#poster-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="10" cy="8" r="1.5"/><path d="m7 16 4-4 6 6M8 20h8"/></svg>포스터 <span>Poster</span></a>
+      <a href="#detail-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 5h8v5H8zm0 9h8m-8 3h8m-8 3h5"/></svg>상세페이지 <span>Detail Page</span></a>
+      <a href="#develop-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m9 7-5 5 5 5m6-10 5 5-5 5m-2-13-2 16"/></svg>개발 <span>Develop</span></a>
+      <a href="#notion-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5c3-1 6-1 9 1v15c-3-2-6-2-9-1V5Zm18 0c-3-1-6-1-9 1v15c3-2 6-2 9-1V5Z"/></svg>공부 기록 <span>Notion</span></a>
+    </nav>
+  </details>
+  <main>
+    <div class="hero-scroll" id="hero-scroll">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-workspace">
+          <section class="creative-terminal" aria-label="Interactive portfolio command prompt">
+            <header class="terminal-titlebar"><span>&gt;_ &nbsp; HYEONA / Command Prompt</span><span aria-hidden="true">&#8212; &nbsp; &#9633; &nbsp; &#215;</span></header>
+            <div class="terminal-body">
+              <p class="terminal-system">HYEONA Portfolio [Version 2026.10]<br>Computer Engineering &amp; UX/UI Design</p>
+              <h1 id="hero-title"><span>DESIGN THAT</span><span>CONNECTS.</span></h1>
+              <p class="terminal-description">From logical thinking to thoughtful design.</p>
+              <div class="terminal-output" id="terminal-output" role="log" aria-live="polite" aria-relevant="additions"></div>
+              <form class="terminal-form" autocomplete="off">
+                <label for="terminal-input">C:\HYEONA&gt;</label>
+                <input id="terminal-input" name="command" type="text" placeholder="Type help" aria-label="Portfolio command" spellcheck="false" autocapitalize="off" enterkeyhint="go" aria-describedby="terminal-help">
+                <button type="submit" aria-label="Run command">Enter &#8629;</button>
+              </form>
+              <p class="terminal-help" id="terminal-help">Type a command and press Enter.</p>
+              <nav class="terminal-shortcuts" aria-label="Available commands"><button type="button" data-command="help">help</button><button type="button" data-command="about">about</button><button type="button" data-command="work">work</button><button type="button" data-command="contact">contact</button><button type="button" data-command="clear">clear</button></nav>
+            </div>
+            <footer class="terminal-statusbar"><span>DESIGN &#215; CODE</span><span>READY FOR YOUR INPUT</span></footer>
+          </section>
+        </div>
+      </section>
+    </div>
+
+    <section class="about section-shell with-rail" id="about" aria-labelledby="about-title">
+      <aside class="section-rail" aria-hidden="true"><span>01 / About me</span></aside>
+      <div class="content-width">
+        <header class="editorial-heading"><h2 id="about-title">About <em>(me)</em></h2><p><strong>기본을 이해하고,</strong><br>더 나은 화면을 만듭니다.</p></header>
+        <div class="about-composition">
+          <div class="profile-visual">
+            <figure class="portrait-frame"><img src="./img/hyeona-portrait.jpg" alt="김현아 증명사진" width="1535" height="2047" loading="lazy"><figcaption>KIM HYEONA · 2026</figcaption></figure>
+            <div class="profile-card"><span class="profile-card-index">DESIGN / DEVELOPMENT</span><h3>KIM HYEONA</h3><p>UX/UI DESIGNER<br>& WEB PUBLISHER</p><div class="profile-card-contact"><span>김현아</span><a href="mailto:01.hyeona@gmail.com">01.hyeona@gmail.com</a></div></div>
+          </div>
+          <p class="about-scope">COMPUTER ENGINEERING<br>UX/UI DESIGN<br>WEB PUBLISHING</p>
+        </div>
+        <div class="about-summary"><p>컴퓨터공학을 전공하며 웹의 구조와 개발 과정을 이해하고,<br>사용자의 시선으로 화면을 설계하는 UX/UI 디자이너 김현아입니다.<br>보기 좋은 화면에서 한 걸음 더 나아가 구현되는 과정과 사용자의 흐름을 함께 생각합니다.<strong>디자인과 개발을 함께 이해하는 강점으로, 자연스럽게 이어지는 경험을 만듭니다.</strong></p></div>
+        <div class="certifications"><h3>자격증</h3><ul><li><time datetime="2026-09-11">2026.09</time><span>정보처리기사</span></li><li><time datetime="2026-06-26">2026.06</time><span>GTQ 일러스트 1급</span></li><li><time datetime="2026-05-15">2026.05</time><span>GTQ 그래픽기술자격 1급</span></li></ul></div>
+      </div>
+    </section>
+
+    <section class="expertise section-shell with-rail" id="expertise" aria-labelledby="expertise-title">
+      <aside class="section-rail" aria-hidden="true"><span>02 / Expertise</span></aside>
+      <div class="content-width">
+        <div class="expertise-overview">
+          <header class="expertise-intro">
+            <p class="expertise-eyebrow">DESIGN &amp; DEVELOPMENT</p>
+            <h2 id="expertise-title">What I <em>do.</em></h2>
+            <p class="expertise-lead">디자인부터 구현까지,<br>생각을 화면으로 연결합니다.</p>
+          </header>
+          <div class="expertise-roles">
+            <article class="expertise-role"><h3>UX/UI &amp; Publishing</h3><p>사용자 흐름을 설계하고, 반응형 웹으로 구현합니다.</p></article>
+            <article class="expertise-role"><h3>Visual Design</h3><p>배너, 포스터, 상세페이지에 브랜드의 개성을 담습니다.</p></article>
+            <article class="expertise-role"><h3>Development</h3><p>기능을 직접 구현하며 서비스의 동작과 구조를 이해합니다.</p></article>
+            <article class="expertise-role"><h3>Study Notes</h3><p>배운 내용과 문제 해결 과정을 기록하며 경험을 쌓습니다.</p></article>
+          </div>
+        </div>
+        <div class="tools-workflow"><h3 id="tools-title">TOOLS & WORKFLOW</h3><p class="tools-intro">프로젝트와 학습 과정에서 직접 사용하며<br>디자인부터 구현, 협업까지 경험을 쌓아온 도구들입니다.</p><div class="tools-groups" id="tools-groups"></div></div>
+      </div>
+    </section>
+
+    <section class="work section-shell with-rail" id="work" aria-labelledby="work-title">
+      <aside class="section-rail" aria-hidden="true"><span>03 / Work Archive</span></aside>
+      <div class="content-width">
+        <header class="editorial-heading"><h2 id="work-title">Work Archive</h2><p><strong>유형별로 골라 보는,</strong><br>디자인과 개발의 기록입니다.</p></header>
+        <nav class="archive-menu" aria-label="작업 유형별 섹션 바로가기">
+          <p class="archive-hint">화살표로 분야를 둘러보고, 가운데 카드를 선택하면 해당 작업으로 이동합니다.</p>
+          <div class="archive-carousel" id="archive-carousel">
+            <button class="round-button archive-prev" type="button" aria-label="이전 작업 유형" aria-controls="archive-cards">←</button>
+            <div class="archive-cards" id="archive-cards"></div>
+            <button class="round-button archive-next" type="button" aria-label="다음 작업 유형" aria-controls="archive-cards">→</button>
+          </div>
+        </nav>
+        <div class="work-galleries">
+          <section class="work-gallery" id="uxui-showcase" aria-labelledby="uxui-title" tabindex="-1">
+            <header class="panel-heading"><span class="section-number">01</span><h3 id="uxui-title">UX/UI &amp; PUBLISHING</h3><p>사용자 흐름을 설계하고 반응형 화면으로 구현한 프로젝트입니다.</p></header>
+            <div class="project-grid uxui-projects">
+              <a class="project-card" href="./projects/noda.html"><div class="project-card-media desktop-preview"><div class="desktop-preview-bar" aria-hidden="true"><span class="desktop-preview-dots"><i></i><i></i><i></i></span><span>NODA / PC PREVIEW</span></div><div class="desktop-preview-viewport" data-desktop-preview><div class="desktop-preview-page"><iframe title="노다 PC 메인 페이지" src="./preview-pages/noda.html" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div></div></div><h4>NODA</h4><p>사용자의 흐름을 정리하고 웹으로 구현한 UX/UI 프로젝트</p><span class="project-link">VIEW PROJECT ↗</span></a>
+              <a class="project-card" href="./projects/romand.html"><div class="project-card-media desktop-preview"><div class="desktop-preview-bar" aria-hidden="true"><span class="desktop-preview-dots"><i></i><i></i><i></i></span><span>ROM&amp;ND / PC PREVIEW</span></div><div class="desktop-preview-viewport" data-desktop-preview><div class="desktop-preview-page"><iframe title="롬앤 PC 메인 페이지" src="./preview-pages/romand.html" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div></div></div><h4>rom&amp;nd</h4><p>브랜드 경험을 웹 화면과 인터랙션으로 구성한 UX/UI 프로젝트</p><span class="project-link">VIEW PROJECT ↗</span></a>
+            </div>
+          </section>
+          <section class="work-gallery" id="banner-showcase" aria-labelledby="banner-title" tabindex="-1">
+            <header class="panel-heading"><span class="section-number">02</span><h3 id="banner-title">HERO BANNER DESIGN</h3><p>브랜드의 분위기와 핵심 메시지가 한 화면에서 자연스럽게 전달되도록 구성합니다.</p></header>
+            <div class="gallery-content" id="banner-gallery"></div>
+          </section>
+          <section class="work-gallery" id="popup-showcase" aria-labelledby="popup-title" tabindex="-1">
+            <header class="panel-heading"><span class="section-number">03</span><h3 id="popup-title">POP-UP DESIGN</h3><p>짧은 노출 시간에 메시지가 전달되도록, 제품 이미지와 정보의 우선순위를 정리합니다.</p></header>
+            <div class="gallery-content" id="popup-gallery"></div>
+          </section>
+          <section class="work-gallery" id="poster-showcase" aria-labelledby="poster-title" tabindex="-1">
+            <header class="panel-heading"><span class="section-number">04</span><h3 id="poster-title">POSTER DESIGN</h3><p>이미지와 타이포그래피를 조합해 한 장의 선명한 인상을 만듭니다.</p></header>
+            <div class="gallery-content" id="poster-gallery"></div>
+          </section>
+          <section class="work-gallery" id="detail-showcase" aria-labelledby="detail-title" tabindex="-1">
+            <header class="panel-heading"><span class="section-number">05</span><h3 id="detail-title">DETAIL PAGE DESIGN</h3><p>첫인상부터 제품 이해와 선택까지, 화면을 따라 이어지는 정보의 흐름을 소개합니다.</p></header>
+            <div class="gallery-content" id="detail-gallery"></div>
+          </section>
+          <section class="work-gallery archive-extra" id="develop-showcase" aria-labelledby="develop-title" tabindex="-1">
+            <header class="panel-heading"><span class="section-number">06</span><h3 id="develop-title">DEVELOP</h3><p>컴퓨터공학 전공과 웹 개발 프로젝트에서 쌓은 구현 경험을 기록합니다.</p></header>
+            <div class="archive-note"><span class="archive-note-index">01 / BUILD &amp; LEARN</span><div><h4>개발 프로젝트</h4><p>기능을 만들며 고민한 구조와 문제 해결 과정을 프로젝트별로 정리하고 있습니다.</p></div><span class="archive-note-symbol" aria-hidden="true">&lt;/&gt;</span></div>
+          </section>
+          <section class="work-gallery archive-extra" id="notion-showcase" aria-labelledby="notion-title" tabindex="-1">
+            <header class="panel-heading"><span class="section-number">07</span><h3 id="notion-title">NOTION STUDY NOTES</h3><p>배운 내용을 기록하고 다시 설명할 수 있도록 정리한 공부 기록입니다.</p></header>
+            <div id="notion-archive"></div>
+          </section>
+        </div>
+        <noscript><p>작업물 갤러리를 보려면 JavaScript를 활성화해 주세요.</p></noscript>
+      </div>
+    </section>
+
+    <section class="contact section-shell with-rail" id="contact" aria-labelledby="contact-title"><aside class="section-rail" aria-hidden="true"><span>04 / Contact</span></aside><div class="content-width"><p>디자인을 이해하는 개발자와,<br>개발을 이해하는 디자이너 사이에서.</p><h2 id="contact-title">Let’s connect.</h2><div class="contact-links"><a href="mailto:01.hyeona@gmail.com">01.hyeona@gmail.com ↗</a><a href="tel:01041244600">010-4124-4600</a></div><footer><a href="#home">BACK TO TOP ↑</a><span>© 2026 KIM HYEONA</span></footer></div></section>
+  </main>
+</body>
+</html>

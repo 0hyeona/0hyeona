@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<base href="https://romand-alpha.vercel.app/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비회원 주문조회 | rom&amp;nd</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/btn-top.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/order-lookup.css">
+
+    <script src="./js/header.js" defer></script>
+    <script src="./js/btn-top.js" defer></script>
+
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+<style>html,body{overflow:auto!important;scroll-behavior:auto!important}.modal,.popup,.main-popup{display:none!important}</style></head>
+
+<body>
+    <header class="pc">
+        <div class="header-top">
+            <div class="common-frame back">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./img/logo.svg" alt="롬앤 메인 로고">
+                    </a>
+                </div>
+                <div class="user-menu">
+                    <div class="lnb">
+                        <div class="search-box" aria-label="검색창">
+                            <label class="search-field" aria-label="검색어 입력">
+                                <input type="text" placeholder="검색어를 입력해주세요">
+                            </label>
+                            <button class="search-toggle" type="button" aria-label="검색 열기">
+                                <img src="./img/icon-search.svg" alt="">
+                            </button>
+                        </div>
+                        <a href="./index-4.html">
+                            <img src="./img/icon-cart.svg" alt="장바구니">
+                        </a>
+                        <a href="./index-6.html" aria-current="page">
+                            <img src="./img/icon-profile.svg" alt="마이페이지">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="header-bottom" aria-label="주 메뉴">
+            <div class="common-frame">
+                <ul class="gnb">
+                    <li><a href="./index.html">ALL</a></li>
+                    <li><a href="./index-2.html">NEW</a></li>
+                    <li><a href="./index-2.html">SHOP</a></li>
+                    <li><a href="./index-2.html">EVENT</a></li>
+                    <li><a href="./index.html">ABOUT US</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="smart-header">
+        <div class="common-frame">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./img/logo.svg" alt="롬앤 메인 로고">
+                </a>
+            </div>
+            <div class="btn-menu">
+                <a href="#" role="button" aria-label="전체 메뉴 열기">
+                    <img src="./img/icon-menubar.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="smart-overlay-menu" aria-label="전체 메뉴">
+        <div class="smart-overlay-menu-1">
+            <div class="common-frame">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./img/logo.svg" alt="롬앤 메인 로고">
+                    </a>
+                </div>
+                <div class="btn-close">
+                    <a href="#" role="button" aria-label="전체 메뉴 닫기">
+                        <img src="./img/icon-close.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="smart-overlay-menu-2">
+            <div class="common-frame">
+                <div class="user-menu">
+                    <div class="search-box" aria-label="검색창">
+                        <label class="search-field" aria-label="검색어 입력">
+                            <input type="text" placeholder="검색어를 입력해주세요">
+                        </label>
+                        <button class="search-toggle" type="button" aria-label="검색 열기">
+                            <img src="./img/icon-search.svg" alt="">
+                        </button>
+                    </div>
+                    <a href="./index-4.html"><img src="./img/icon-cart.svg" alt="장바구니"></a>
+                    <a href="./index-6.html"><img src="./img/icon-profile.svg" alt="마이페이지"></a>
+                </div>
+            </div>
+        </div>
+        <div class="smart-overlay-menu-top">
+            <div class="common-frame">
+                <ul class="gnb-smart">
+                    <li class="on"><a href="./index-2.html">NEW</a></li>
+                    <li><a href="./index-2.html">SHOP</a></li>
+                    <li><a href="./index-2.html">EVENT</a></li>
+                    <li><a href="./index.html">ABOUT US</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="smart-overlay-menu-bottom">
+            <ul class="gnb-smart-list">
+                <li class="on">
+                    <div class="gnb2depths-smart">
+                        <div class="common-frame">
+                            <section>
+                                <h4><a href="./index-2.html">신상품</a></h4>
+                                <ul><li><a href="./index-2.html">전체 신제품</a></li><li><a href="#">이달의 신제품</a></li></ul>
+                            </section>
+                            <section>
+                                <h4><a href="#">콜라보</a></h4>
+                                <ul><li><a href="#">시즌 컬렉션</a></li><li><a href="#">한정판 에디션</a></li></ul>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gnb2depths-smart">
+                        <div class="common-frame">
+                            <section><h4><a href="./index-2.html">LIP</a></h4><ul><li><a href="#">틴트</a></li><li><a href="#">립스틱</a></li></ul></section>
+                            <section><h4><a href="#">EYE</a></h4><ul><li><a href="#">아이섀도우</a></li><li><a href="#">마스카라</a></li></ul></section>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gnb2depths-smart">
+                        <div class="common-frame">
+                            <section><h4><a href="#">기획전</a></h4><ul><li><a href="#">진행 중인 기획전</a></li><li><a href="#">세일 특가</a></li></ul></section>
+                            <section><h4><a href="#">혜택</a></h4><ul><li><a href="#">쿠폰존</a></li><li><a href="#">출석체크</a></li></ul></section>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gnb2depths-smart">
+                        <div class="common-frame">
+                            <section><h4><a href="#">브랜드 소개</a></h4><ul><li><a href="#">브랜드 컬러</a></li><li><a href="#">매장 안내</a></li></ul></section>
+                            <section><h4><a href="#">고객 지원</a></h4><ul><li><a href="#">공지사항</a></li><li><a href="#">FAQ</a></li></ul></section>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="order-page">
+        <div class="order-page__inner">
+            <header class="order-heading">
+                <h1>비회원 주문조회</h1>
+                <p>주문 내역이 조회되었습니다. 주문 상세 및 배송 현황을 확인해주세요.</p>
+            </header>
+
+            <dl class="order-summary" aria-label="주문 기본 정보">
+                <div>
+                    <dt>주문일자</dt>
+                    <dd>2026.10.20</dd>
+                </div>
+                <div>
+                    <dt>주문번호</dt>
+                    <dd>20261020-0001234</dd>
+                </div>
+            </dl>
+
+            <section class="order-section status-section" aria-labelledby="status-title">
+                <h2 class="order-section__title" id="status-title">나의 주문처리 현황</h2>
+                <div class="status-section__body">
+                    <ol class="order-progress">
+                        <li class="progress-step">
+                            <strong class="progress-count">0</strong>
+                            <span>입금확인</span>
+                        </li>
+                        <li class="progress-arrow" aria-hidden="true">›</li>
+                        <li class="progress-step">
+                            <strong class="progress-count">0</strong>
+                            <span>배송준비중</span>
+                        </li>
+                        <li class="progress-arrow" aria-hidden="true">›</li>
+                        <li class="progress-step is-current" aria-current="step">
+                            <strong class="progress-count">1</strong>
+                            <span>배송중</span>
+                        </li>
+                        <li class="progress-arrow" aria-hidden="true">›</li>
+                        <li class="progress-step">
+                            <strong class="progress-count">0</strong>
+                            <span>배송완료</span>
+                        </li>
+                    </ol>
+
+                    <nav class="order-actions" aria-label="주문 관련 메뉴">
+                        <a class="exchange" href="#">교환/반품 신청</a>
+                        <a class="delivery" href="#">배송 관련 문의</a>
+                        <a class="cancel" href="#">주문 취소</a>
+                    </nav>
+                </div>
+            </section>
+
+            <section class="order-section product-section" aria-labelledby="product-title">
+                <h2 class="order-section__title" id="product-title">주문 상품 정보</h2>
+                <div class="product-section__body">
+                    <ul class="ordered-products">
+                        <li class="ordered-product">
+                            <figure class="ordered-product__image">
+                                <img src="./img/lip-list-img-1.jpg" alt="롬앤 글래스팅 컬러 글로스">
+                            </figure>
+                            <div class="ordered-product__details">
+                                <h3>롬앤 글래스팅 컬러 글로스</h3>
+                                <p>컬러 5</p>
+                            </div>
+                            <p class="ordered-product__quantity"><span class="blind">수량 </span>1개</p>
+                            <p class="ordered-product__price">9,900원</p>
+                        </li>
+                        <li class="ordered-product">
+                            <figure class="ordered-product__image">
+                                <img src="./img/lip-list-img-4.jpg" alt="롬앤 더 쥬시 래스팅 틴트">
+                            </figure>
+                            <div class="ordered-product__details">
+                                <h3>롬앤 더 쥬시 래스팅 틴트</h3>
+                                <p>컬러 2</p>
+                            </div>
+                            <p class="ordered-product__quantity"><span class="blind">수량 </span>1개</p>
+                            <p class="ordered-product__price">9,400원</p>
+                        </li>
+                    </ul>
+
+                    <nav class="product-actions" aria-label="상품 관련 메뉴">
+                        <a href="#">주문 상세보기</a>
+                        <a href="#">배송조회</a>
+                    </nav>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="btn-top" aria-label="화면 상단으로 이동">↑</div>
+
+    <footer class="pc">
+        <div class="foot-con1">
+            <figure class="foot-logo"><img src="./img/foot-logo.svg" alt="롬앤 푸터 로고"></figure>
+            <ul class="foot-menu"><li><a href="#">이용약관</a></li><li>|</li><li><a href="#">개인정보처리 방침</a></li><li>|</li><li><a href="#">사업자 정보 확인</a></li></ul>
+            <div class="copy">© 2026 하이파이프팀 포트폴리오 리디자인 사이트입니다.</div>
+        </div>
+        <div class="con-txt">
+            <div class="foot-con2"><ul class="address"><li>주소 <span>서울특별시 강남구 도산대로 328</span></li><li>사업자번호 <span>777-77-77777</span></li></ul></div>
+            <div class="foot-con3"><h4>CUSTOMER CENTER</h4><p>1588-2026</p><ul><li>평일 <span>09:30 - 18:00</span></li><li>점심시간 <span>12:00 - 13:00</span></li><li><span>토·일 공휴일 휴무</span></li></ul></div>
+            <div class="foot-con4"><h4>FOLLOW US</h4><p>인스타그램과 유튜브에서 다양한 소식을 만나보세요.</p><ul class="sns-icon"><li><a href="#"><img src="./img/kakao.png" alt="카카오톡"></a></li><li><a href="#"><img src="./img/youtube.png" alt="유튜브"></a></li><li><a href="#"><img src="./img/instagram.png" alt="인스타그램"></a></li></ul></div>
+        </div>
+    </footer>
+
+    <div class="pad-footer">
+        <div class="foot-con1">
+            <figure class="foot-logo"><img src="./img/foot-logo.svg" alt="롬앤 푸터 로고"></figure>
+            <ul class="foot-menu"><li><a href="#">이용약관</a></li><li>|</li><li><a href="#">개인정보처리 방침</a></li><li>|</li><li><a href="#">사업자 정보 확인</a></li></ul>
+            <div class="foot-con2"><ul class="address"><li>주소 <span>서울특별시 강남구 도산대로 328</span></li><li>사업자번호 <span>777-77-77777</span></li></ul></div>
+            <div class="copy">© 2026 하이파이프팀 포트폴리오 리디자인 사이트입니다.</div>
+        </div>
+        <div class="foot-con3"><h4>CUSTOMER CENTER</h4><p>1588-2026</p><ul><li>평일 <span>09:30 - 18:00</span></li><li>점심시간 <span>12:00 - 13:00</span></li><li><span>토·일 공휴일 휴무</span></li></ul></div>
+        <div class="foot-con4"><h4>FOLLOW US</h4><p>인스타그램과 유튜브에서 다양한 소식을 만나보세요.</p><ul class="sns-icon"><li><a href="#"><img src="./img/kakao.png" alt="카카오톡"></a></li><li><a href="#"><img src="./img/youtube.png" alt="유튜브"></a></li><li><a href="#"><img src="./img/instagram.png" alt="인스타그램"></a></li></ul></div>
+    </div>
+<script>document.querySelectorAll('.modal,.popup,.main-popup').forEach(node=>node.remove());</script></body>
+
+</html>

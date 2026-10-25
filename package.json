@@ -1,0 +1,16 @@
+{
+  "name": "hyeona-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "김현아 UX/UI 디자이너 · 웹 퍼블리셔 포트폴리오",
+  "scripts": {
+    "dev": "node scripts/server.mjs",
+    "start": "node scripts/server.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node --check app.js && node --check projects/project-preview.js && node --check portfolio-data.js && node --check scripts/server.mjs && node --check scripts/build.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

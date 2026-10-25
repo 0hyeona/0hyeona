@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+<base href="https://romand-alpha.vercel.app/">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rom&nd 리디자인</title>
+  <!-- css 연결 -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/popup.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/banner.css">
+  <link rel="stylesheet" href="./css/brandstory.css">
+  <link rel="stylesheet" href="./css/btn-top.css">
+  <link rel="stylesheet" href="./css/bestseller.css">
+  <link rel="stylesheet" href="./css/sns.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <!-- 스와이퍼 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+  <!-- js 연결 -->
+  
+  <script src="./js/header.js" defer></script>
+  <script src="./js/banner.js" defer></script>
+  <script src="./js/btn-top.js" defer></script>
+  <script src="./js/product-bestseller.js" defer></script>
+  <script src="./js/product-bestseller-control.js" defer></script>
+  <!-- 스와이퍼 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+  <!-- 파비콘 -->
+  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+
+<style>html,body{overflow:auto!important;scroll-behavior:auto!important}.modal,.popup,.main-popup{display:none!important}</style></head>
+
+<body>
+  <!-- 메인 팝업 -->
+  <div class="modal"></div>
+  <div class="popup">
+    <figure>
+      <img src="./img/final-design/popup-img.png" alt="메인화면 신규가입 혜택 팝업 사진">
+    </figure>
+      <div class="popup-ctl">
+        <span class="popup-today-close">오늘 하루 보지않기</span>
+        <span class="popup-close">닫기</span>
+      </div>
+  </div>
+  <!-- 데스크탑용 헤더 -->
+  <header class="pc">
+      <div class="header-top">
+      <div class="common-frame back">
+          <div class="logo">
+          <a href="./index.html">
+              <img src="./img/logo.svg" alt="롬앤 메인 로고" />
+          </a>
+          </div>
+          <ul class="user-menu">
+          <div class="lnb">
+              <div class="search-box" aria-label="검색창">
+              <label class="search-field" aria-label="검색어 입력">
+                  <input type="text" placeholder="검색어를 입력해주세요" />
+              </label>
+              <button class="search-toggle" type="button" aria-label="검색 열기">
+                  <img src="./img/icon-search.svg" alt="검색 아이콘" />
+              </button>
+              </div>
+              <li>
+              <a href="./index-4.html">
+                  <img src="./img/icon-cart.svg" alt="장바구니 아이콘" />
+              </a>
+              </li>
+              <li>
+              <a href="./index-6.html">
+                  <img src="./img/icon-profile.svg" alt="마이페이지 아이콘" />
+              </a>
+              </li>
+          </ul>
+      </div>
+      </div>
+      <div class="header-bottom">
+      <div class="common-frame">
+          <ul class="gnb">
+          <!-- ALL -->
+          <li>
+              <a href="./index.html">ALL</a>
+              <div class="gnb2depths">
+              <div class="common-frame">
+                  <section>
+                  </section>
+              </div>
+              </div>
+          </li>
+          <!-- NEW -->
+          <li>
+              <a href="./index-2.html">NEW</a>
+              <div class="gnb2depths">
+              <div class="common-frame">
+                  <section>
+                  <h4><a href="./index-2.html">NEW</a></h4>
+                  </section>
+                  <section>
+                  <h4><a href="./index-2.html">신제품</a></h4>
+                  <ul>
+                      <li><a href="./index-2.html">전체 신제품</a></li>
+                      <li><a href="./index-2.html">이달의 신제품</a></li>
+                  </ul>
+                  </section>
+                  <section>
+                  <h4>콜라보</h4>
+                  <ul>
+                      <li><a href="#">시즌 컬렉션</a></li>
+                      <li><a href="#">한정판 에디션</a></li>
+                  </ul>
+                  </section>
+                  <section>
+                  <h4><a href="#">재입고</a></h4>
+                  <ul>
+                      <li><a href="#">인기 재입고</a></li>
+                      <li><a href="#">단종 귀환 아이템</a></li>
+                  </ul>
+                  </section>
+              </div>
+              </div>
+          </li>
+          <!-- SHOP -->
+          <li>
+              <a href="./index-2.html">SHOP</a>
+              <div class="gnb2depths">
+              <div class="common-frame">
+                  <section>
+                  <h4><a href="./index-2.html">SHOP</a></h4>
+                  </section>
+                  <section>
+                  <h4><a href="./index-2.html">LIP</a></h4>
+                  <ul>
+                      <li><a href="./index-2.html">틴트</a></li>
+                      <li><a href="./index-2.html">립스틱</a></li>
+                      <li><a href="./index-2.html">립글로즈/립밤</a></li>
+                      <li><a href="./index-2.html">립라이너</a></li>
+                  </ul>
+                  </section>
+                  <section>
+                  <h4>EYE</h4>
+                  <ul>
+                      <li><a href="#">아이섀도우</a></li>
+                      <li><a href="#">마스카라</a></li>
+                      <li><a href="#">아이라이너</a></li>
+                      <li><a href="#">브로우</a></li>
+                  </ul>
+                  </section>
+                  <section>
+                  <h4><a href="#">FACE</a></h4>
+                  <ul>
+                      <li><a href="#">쿠션 / 파운데이션</a></li>
+                      <li><a href="#">파우더 / 팩트</a></li>
+                      <li><a href="#">블러셔</a></li>
+                      <li><a href="#">쉐딩 / 하이라이터</a></li>
+                  </ul>
+                  </section>
+                  <section>
+                  <h4><a href="#">TOOL & ACC</a></h4>
+                  <ul>
+                      <li><a href="#">브러쉬 / 퍼프</a></li>
+                      <li><a href="#">뷰티 툴</a></li>
+                      <li><a href="#">브랜드 굿즈</a></li>
+                  </ul>
+                  </section>
+              </div>
+              </div>
+          </li>
+          <!-- EVENT -->
+          <li>
+              <a href="./index-2.html">EVENT</a>
+              <div class="gnb2depths">
+              <div class="common-frame">
+                  <section>
+                  <h4><a href="#">EVENT</a></h4>
+                  </section>
+                  <section>
+                  <h4><a href="#">기획전</a></h4>
+                  <ul>
+                      <li><a href="#">진행 중인 기획전</a></li>
+                      <li><a href="#">세일 특가</a></li>
+                      <li><a href="#">예약 판매</a></li>
+                  </ul>
+                  </section>
+                  <section>
+                  <h4>혜택</h4>
+                  <ul>
+                      <li><a href="#">회원 등급별 혜택</a></li>
+                      <li><a href="#">쿠폰존</a></li>
+                      <li><a href="#">출석체크</a></li>
+                  </ul>
+                  </section>
+                  <section>
+                  <h4><a href="#">리뷰</a></h4>
+                  <ul>
+                      <li><a href="#">베스트 리뷰</a></li>
+                      <li><a href="#">실시간 포토 리뷰</a></li>
+                  </ul>
+                  </section>
+              </div>
+              </div>
+          </li>
+          <!-- ABOUT US -->
+          <li>
+              <a href="./index.html">ABOUT US</a>
+              <div class="gnb2depths">
+              <div class="common-frame">
+                  <section>
+                  <h4><a href="#">ABOUT US</a></h4>
+                  </section>
+                  <section>
+                  <h4><a href="#">브랜드 소개</a></h4>
+                  <ul>
+                      <li><a href="#">브랜드 컬러</a></li>
+                      <li><a href="#">세일 특가</a></li>
+                      <li><a href="#">예약 판매</a></li>
+                  </ul>
+                  </section>
+                  <section>
+                  <h4>컬러링</h4>
+                  <ul>
+                      <li><a href="#">웜톤 추천</a></li>
+                      <li><a href="#">쿨톤 추천</a></li>
+                      <li><a href="#">퍼스널컬러 진단 가이드</a></li>
+                  </ul>
+                  </section>
+                  <section>
+                  <h4><a href="#">매장 안내</a></h4>
+                  <ul>
+                      <li><a href="#">국내 매장</a></li>
+                      <li><a href="#">해외 매장</a></li>
+                  </ul>
+                  </section>
+                  <section>
+                  <h4><a href="#">고객 지원</a></h4>
+                  <ul>
+                      <li><a href="#">공지사항</a></li>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">1:1 문의</a></li>
+                  </ul>
+                  </section>
+              </div>
+              </div>
+          </li>
+          </ul>
+      </div>
+      </div>
+      </div>
+  </header>
+
+  <!-- 패드 / 모바일용 헤더  -->
+  <div class="smart-header">
+      <div class="common-frame">
+      <div class="logo">
+          <a href="./index.html">
+          <img src="./img/logo.svg" alt="롬앤 메인 로고" />
+          </a>
+      </div>
+      <div class="btn-menu">
+          <a href="#">
+          <img src="./img/icon-menubar.svg" alt="전체 메뉴 열기" />
+          </a>
+      </div>
+      </div>
+  </div>
+
+  <!-- 패드 / 모바일용 전체 메가메뉴 -->
+  <div class="smart-overlay-menu">
+      <div class="smart-overlay-menu-1">
+      <div class="common-frame">
+          <div class="logo">
+          <a href="./index.html">
+              <img src="./img/logo.svg" alt="롬앤 메인 로고" />
+          </a>
+          </div>
+          <div class="btn-close">
+          <a href="#">
+              <img src="./img/icon-close.svg" alt="전체 메뉴 닫기" />
+          </a>
+          </div>
+      </div>
+      </div>
+      <div class="smart-overlay-menu-2">
+      <div class="common-frame">
+          <div class="user-menu">
+          <div class="search-box" aria-label="검색창">
+              <label class="search-field" aria-label="검색어 입력">
+              <input type="text" placeholder="검색어를 입력해주세요" />
+              </label>
+              <button class="search-toggle" type="button" aria-label="검색 열기">
+              <img src="./img/icon-search.svg" alt="검색 아이콘" />
+              </button>
+          </div>
+          <a href="#">
+              <img src="./img/icon-cart.svg" alt="장바구니 아이콘" />
+          </a>
+          <a href="./index-6.html">
+              <img src="./img/icon-profile.svg" alt="마이페이지 아이콘" />
+          </a>
+          </div>
+      </div>
+      </div>
+      <div class="smart-overlay-menu-top">
+      <div class="common-frame">
+          <ul class="gnb-smart">
+          <li class="on"><a href="./index-2.html">NEW</a></li>
+          <li><a href="./index-2.html">SHOP</a></li>
+          <li><a href="./index-2.html">EVENT</a></li>
+          <li><a href="./index.html">ABOUT US</a></li>
+          </ul>
+      </div>
+      </div>
+      <div class="smart-overlay-menu-bottom">
+      <ul class="gnb-smart-list">
+          <!-- 1 NEW -->
+          <li>
+          <a href="./index-2.html" class="gnb-smart-title">NEW</a>
+          <div class="gnb2depths-smart">
+              <div class="common-frame">
+              <section>
+                  <h4><a href="./index-2.html">신상품</a></h4>
+                  <ul>
+                  <li><a href="./index-2.html">전체 신제품</a></li>
+                  <li><a href="./index-2.html">이달의 신제품</a></li>
+                  </ul>
+              </section>
+              <section>
+                  <h4><a href="#">콜라보</a></h4>
+                  <ul>
+                  <li><a href="#">시즌 컬렉션</a></li>
+                  <li><a href="#">한정판 에디션</a></li>
+                  </ul>
+              </section>
+              <section>
+                  <h4><a href="#">재입고</a></h4>
+                  <ul>
+                  <li><a href="#">인기 재입고</a></li>
+                  <li><a href="#">단종 귀환 아이템</a></li>
+                  </ul>
+              </section>
+              </div>
+          </div>
+          </li>
+          <!-- 2 SHOP -->
+          <li>
+          <a href="./index-2.html" class="gnb-smart-title">SHOP</a>
+          <div class="gnb2depths-smart">
+              <div class="common-frame">
+              <section>
+                  <h4><a href="./index-2.html">LIP</a></h4>
+                  <ul>
+                  <li><a href="./index-2.html">틴트</a></li>
+                  <li><a href="./index-2.html">립스틱</a></li>
+                  <li><a href="./index-2.html">립글로즈 / 립밤</a></li>
+                  <li><a href="./index-2.html">립 라이너</a></li>
+                  </ul>
+              </section>
+              <section>
+                  <h4><a href="#">EYE</a></h4>
+                  <ul>
+                  <li><a href="#">아이섀도우</a></li>
+                  <li><a href="#">마스카라</a></li>
+                  <li><a href="#">아이라이너</a></li>
+                  <li><a href="#">브로우</a></li>
+                  </ul>
+              </section>
+              <section>
+                  <h4><a href="#">FACE</a></h4>
+                  <ul>
+                  <li><a href="#">쿠션 / 파운데이션</a></li>
+                  <li><a href="#">파우더 / 팩트</a></li>
+                  <li><a href="#">블러셔</a></li>
+                  <li><a href="#">쉐딩 / 하이라이터</a></li>
+                  </ul>
+              </section>
+              <section>
+                  <h4><a href="#">TOOL</a></h4>
+                  <ul>
+                  <li><a href="#">브러쉬 / 퍼프</a></li>
+                  <li><a href="#">뷰티 툴</a></li>
+                  <li><a href="#">브랜드 굿즈</a></li>
+                  </ul>
+              </section>
+              </div>
+          </div>
+          </li>
+          <!-- 3 EVENT -->
+          <li>
+          <a href="./index-2.html" class="gnb-smart-title">EVENT</a>
+          <div class="gnb2depths-smart">
+              <div class="common-frame">
+              <section>
+                  <h4><a href="#">기획전</a></h4>
+                  <ul>
+                  <li><a href="#">진행 중인 기획전</a></li>
+                  <li><a href="#">세일 특가</a></li>
+                  <li><a href="#">예약 판매</a></li>
+                  </ul>
+              </section>
+              <section>
+                  <h4><a href="#">혜택</a></h4>
+                  <ul>
+                  <li><a href="#">회원 등급별 혜택</a></li>
+                  <li><a href="#">쿠폰존</a></li>
+                  <li><a href="#">출석체크</a></li>
+                  </ul>
+              </section>
+              <section>
+                  <h4><a href="#">리뷰</a></h4>
+                  <ul>
+                  <li><a href="#">베스트 리뷰</a></li>
+                  <li><a href="#">실시간 포토 리뷰</a></li>
+                  </ul>
+              </section>
+              </div>
+          </div>
+          </li>
+          <!-- 4 ABOUT US -->
+          <li>
+          <a href="./index.html" class="gnb-smart-title">ABOUT US</a>
+          <div class="gnb2depths-smart">
+              <div class="common-frame">
+              <section>
+                  <h4><a href="#">브랜드 소개</a></h4>
+                  <ul>
+                  <li><a href="#">브랜드 컬러</a></li>
+                  <li><a href="#">캠페인</a></li>
+                  </ul>
+              </section>
+              <section>
+                  <h4><a href="#">컬러링</a></h4>
+                  <ul>
+                  <li><a href="#">웜톤 추천</a></li>
+                  <li><a href="#">쿨톤 추천</a></li>
+                  <li><a href="#">퍼스널 컬러 진단 가이드</a></li>
+                  </ul>
+              </section>
+              <section>
+                  <h4><a href="#">매장 안내</a></h4>
+                  <ul>
+                  <li><a href="#">국내 매장</a></li>
+                  <li><a href="#">국외 매장</a></li>
+                  </ul>
+              </section>
+              <section>
+                  <h4><a href="#">고객 지원</a></h4>
+                  <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">1:1 문의</a></li>
+                  </ul>
+              </section>
+              </div>
+          </div>
+          </li>
+      </ul>
+      </div>
+  </div>
+  <main>
+    <!-- 히어로 배너 -->
+    <div class="swiper hero-slider">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img class="pc" src="./img/final-design/new-banner-pc.jpg" alt="romand 신상품 배너 디자인" />
+          <img class="pad" src="./img/final-design/new-banner-pad.jpg" alt="romand 신상품 배너 디자인" />
+          <img class="mobile" src="./img/final-design/new-banner-mo.jpg" alt="romand 신상품 배너 디자인" />
+
+
+        </div>
+        <div class="swiper-slide">
+          <img class="pc" src="./img/final-design/only-banner-pc.jpg" alt="ONLY romand 배너 디자인" />
+          <img class="pad" src="./img//final-design/only-banner-pad.jpg" alt="ONLY romand 배너 디자인" />
+          <img class="mobile" src="./img/final-design/only-banner-mo.jpg" alt="ONLY romand 배너 디자인" />
+        </div>
+        <div class="swiper-slide">
+          <img class="pc" src="./img/final-design/branding-banner-pc.jpg" alt="romand 브랜딩 배너 디자인" />
+          <img class="pad" src="./img/final-design/branding-banner-pad.jpg" alt="romand 브랜딩 배너 디자인" />
+          <img class="mobile" src="./img/final-design/branding-banner-mo.jpg" alt="romand 브랜딩 배너 디자인" />
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- 브랜드 스토리 -->
+    <div class="brand-story">
+      <div class="line"><img src="./img/line.png" alt="브랜드스토리 상단 구분선"></div>
+      <h3>사랑스럽게, 그리고 나답게.</h3>
+      <h1>ROMANTIC, WITH A TOUCH OF CHIC.</h1>
+      <p>
+        rom&nd만의 로맨틱한 감성과 가볍고 세련된 무드를 담아 매일의 취향에 어울리는 새로운 아름다움을 만들어갑니다. <br>당신의 모든 가능성에 새로운 즐거움을 더합니다.
+      </p>
+      <figure>
+        <img src="./img/final-design/brand-intro.png" alt="롬앤 브랜드 스토리 사진">
+      </figure>
+      <a href="#">OUR STORY ></a>
+    </div>
+
+    <!-- 베스트 셀러 -->
+    <div class="bestseller-card-list-wrap">
+      <h1>BEST SELLER</h1>
+      <ul class="product-card">
+        <li class="product-card-list">
+          <a href="#" class="product-visual">
+            <span class="rank">1</span>
+            <div>
+              <img class="product-img" src="./img/lip-list-img-1.jpg" alt="제품 이미지">
+              <img class="product-img-model" src="./img/lip-list-model-img-1.jpg" alt="제품 모델 이미지">
+            </div>
+          </a>
+          <div class="product-txt">
+            <h2 class="product-name">쥬시 플래시 립 오일(+롬앤 립 랜덤 1종 증정)</h2>
+            <p class="price-original"><span>14,000</span>원</p>
+            <div class="discount-txt">
+              <p class="discount">22%</p>
+              <p class="price-discount"><span>10,900</span>원</p>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-scroll" aria-label="쥬시 플래시 립 오일(+롬앤 립 랜덤 1종 증정) 전체 컬러">
+
+              <button type="button" class="color-dot " style="--chip-color: #9A777E;" aria-label="1번 컬러"></button>
+
+              <button type="button" class="color-dot " style="--chip-color: #B1848C;" aria-label="2번 컬러"></button>
+
+              <button type="button" class="color-dot " style="--chip-color: #C999A1;" aria-label="3번 컬러"></button>
+
+              <button type="button" class="color-dot " style="--chip-color: #DCB4BA;" aria-label="4번 컬러"></button>
+
+              <button type="button" class="color-dot " style="--chip-color: #EAD8DC;" aria-label="5번 컬러"></button>
+
+              <button type="button" class="color-dot extra-color" style="--chip-color: #724047;"
+                aria-label="6번 컬러"></button>
+
+              <button type="button" class="color-dot extra-color" style="--chip-color: #864A51;"
+                aria-label="7번 컬러"></button>
+
+              <button type="button" class="color-dot extra-color" style="--chip-color: #A55F68;"
+                aria-label="8번 컬러"></button>
+
+              <button type="button" class="color-dot extra-color" style="--chip-color: #BD7580;"
+                aria-label="9번 컬러"></button>
+
+              <button type="button" class="color-dot extra-color" style="--chip-color: #D08C96;"
+                aria-label="10번 컬러"></button>
+
+              <button type="button" class="color-dot extra-color" style="--chip-color: #E2ABB3;"
+                aria-label="11번 컬러"></button>
+
+              <button type="button" class="color-dot extra-color" style="--chip-color: #F1CED3;"
+                aria-label="12번 컬러"></button>
+
+
+
+              <button type="button" class="color-more" aria-expanded="false">+7Color</button>
+
+              <button type="button" class="color-close" aria-label="전체 컬러 접기">−</button>
+
+            </div>
+          </div>
+          <div class="badges">
+            <span class="badge best off">BEST</span>
+            <span class="badge new on">NEW</span>
+          </div>
+        </li>
+      </ul>
+      <div class="bestseller-btn">
+        <a href="./index-2.html">VIEW MORE</a>
+      </div>
+    </div>
+
+    <!-- SNS -->
+    <div class="section-sns common-frame">
+      <div class="sns-img-section">
+        <figure class="pc">
+          <img src="./img/sns-pc.jpg" alt="sns pc 이미지">
+        </figure>
+        <figure class="pad">
+          <img src="./img/sns-pad.jpg" alt="sns pad 이미지">
+        </figure>
+        <figure class="mobile">
+          <img src="./img/sns-mobile.jpg" alt="sns mobile 이미지">
+        </figure>
+      </div>
+    </div>
+    <!-- 화면 상단으로 이동하는 플로팅 버튼 -->
+    <div class="btn-top">↑</div>
+
+    <!-- 푸터 -->
+    <footer class="pc">
+      <div class="foot-con1">
+        <figure class="foot-logo">
+          <img src="./img/foot-logo.svg" alt="롬앤 리디자인 푸터 로고 사진">
+        </figure>
+        <ul class="foot-menu">
+          <li><a href="#">이용약관</a></li>
+          <li>|</li>
+          <li><a href="#">개인정보처리 방침</a></li>
+          <li>|</li>
+          <li><a href="#">사업자 정보 확인</a></li>
+        </ul>
+        <div class="copy">© 2026 하이파이프팀 포트폴리오 리디자인 사이트입니다.</div>
+      </div>
+      <div class="con-txt">
+        <div class="foot-con2">
+          <ul class="address">
+            <li>주소 <span>서울특별시 강남구 도산대로 328</span></li>
+            <li>사업자번호 <span>777-77-77777</span></li>
+          </ul>
+        </div>
+        <div class="foot-con3">
+          <h4>CUSTOMER CENTER</h4>
+          <p>1588-2026</p>
+          <ul>
+            <li>평일 <span>09:30 - 18:00</span></li>
+            <li>점심시간 <span>12:00 - 13:00</span></li>
+            <li><span>토·일 공휴일 휴무</span></li>
+          </ul>
+        </div>
+        <div class="foot-con4">
+          <h4>FOLLOW US</h4>
+          <p>인스타그램과 유튜브에서 다양한 소식을 만나보세요.</p>
+          <ul class="sns-icon">
+            <li><a href="#"><img src="./img/kakao.png" alt="롬앤 카카오톡 채널 바로가기"></a></li>
+            <li><a href="#"><img src="./img/youtube.png" alt="롬앤 유튜브 채널 바로가기"></a></li>
+            <li><a href="#"><img src="./img/instagram.png" alt="롬앤 인스타그램 계정 바로가기"></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 태블릿 + 모바일 공용 푸터 (1024px 이하) -->
+    <div class="pad-footer">
+      <div class="foot-con1">
+        <figure class="foot-logo">
+          <img src="./img/foot-logo.svg" alt="롬앤 리디자인 푸터 로고 사진">
+        </figure>
+        <ul class="foot-menu">
+          <li><a href="#">이용약관</a></li>
+          <li>|</li>
+          <li><a href="#">개인정보처리 방침</a></li>
+          <li>|</li>
+          <li><a href="#">사업자 정보 확인</a></li>
+        </ul>
+        <div class="foot-con2">
+          <ul class="address">
+            <li>주소 <span>서울특별시 강남구 도산대로 328</span></li>
+            <li>사업자번호 <span>777-77-77777</span></li>
+          </ul>
+        </div>
+        <div class="copy">© 2026 하이파이프팀 포트폴리오 리디자인 사이트입니다.</div>
+      </div>
+      <div class="foot-con3">
+        <h4>CUSTOMER CENTER</h4>
+        <p>1588-2026</p>
+        <ul>
+          <li>평일 <span>09:30 - 18:00</span></li>
+          <li>점심시간 <span>12:00 - 13:00</span></li>
+          <li><span>토·일 공휴일 휴무</span></li>
+        </ul>
+      </div>
+      <div class="foot-con4">
+        <h4>FOLLOW US</h4>
+        <p>인스타그램과 유튜브에서 다양한 소식을 만나보세요.</p>
+        <ul class="sns-icon">
+          <li><a href="#"><img src="./img/kakao.png" alt="롬앤 카카오톡 채널 바로가기"></a></li>
+          <li><a href="#"><img src="./img/youtube.png" alt="롬앤 유튜브 채널 바로가기"></a></li>
+          <li><a href="#"><img src="./img/instagram.png" alt="롬앤 인스타그램 계정 바로가기"></a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+<script>document.querySelectorAll('.modal,.popup,.main-popup').forEach(node=>node.remove());</script></body>
+
+</html>

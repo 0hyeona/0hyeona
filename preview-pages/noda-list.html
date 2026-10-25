@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>상품 카드리스트</title>
+
+<!-- 검색엔진 사용할 때 나오는 설명 -->
+<meta name="description" content="나만의 공간을 따뜻하게 채우는 가구 브랜드, NODA. 1인 가구와 자취 공간을 위한 가구부터 조명, 패브릭, 홈데코까지 만나보세요." />
+<!-- 검색 결과에 표시될 페이지 설명 -->
+<meta name="description" content="나만의 공간을 따뜻하게 채우는 가구 브랜드, NODA. 1인 가구와 자취 공간을 위한 가구부터 조명, 패브릭, 홈데코까지 만나보세요." />
+<!-- 작성자 -->
+<meta name="author" content="NODA" />
+<!-- 검색엔진 크롤링 설정 -->
+<meta name="robots" content="index, follow" />
+<!-- 대표 URL: 실제 홈페이지 주소로 변경 (도메인 구매 후 수정해야 함 )-->
+<link rel="canonical" href="https://example.com/" />
+
+<!-- 카카오톡, SNS 등에 링크 공유 시 표시되는 정보 : 공유 시 카드리스트로 보여지게끔 하는 정보들 (og : open graph)-->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="NODA 노다" />
+<meta property="og:title" content="NODA 노다 | 나만의 공간을 채우는 감성 가구" />
+<meta property="og:description" content="작은 공간에도 나다운 취향을. 가구부터 조명, 홈데코까지 NODA와 함께 따뜻한 일상을 완성하세요." />
+<meta property="og:url" content="https://0hyeona.github.io/noda-furniture-store/" />
+<meta property="og:image" content="https://example.com/images/noda-og.jpg" />
+<meta property="og:image:alt" content="NODA의 따뜻한 우드톤 가구로 꾸민 아늑한 공간" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NODA 노다 | 나만의 공간을 채우는 감성 가구" />
+<meta name="twitter:description" content="작은 공간에도 나다운 취향을. NODA의 가구, 조명, 홈데코를 만나보세요." />
+<!-- 카드리스트로 보여지는 이미지 -->
+<meta name="twitter:image" content="https://0hyeona.github.io/noda-furniture-store/img/op-img" />
+
+<!-- favicon -->
+<link rel="icon" type="image/png" href="./img/favicon.png" />
+
+<link rel="stylesheet" href="./css/font.css" />
+<link rel="stylesheet" href="./css/reset.css" />
+<link rel="stylesheet" href="./css/common.css" />
+<link rel="stylesheet" href="./css/header.css">
+<link rel="stylesheet" href="./css/footer.css">
+
+<link rel="stylesheet" href="./css/list.css?v=20261006">
+<!-- 제품 리스트 js -->
+<script src="./js/buy-product.js" defer></script>
+<script src="./js/buy-product-control.js" defer></script>
+<script src="./js/index.js?v=20260928" defer></script>
+
+<style>html,body{overflow:auto!important;scroll-behavior:auto!important}.modal,.popup,.main-popup{display:none!important}</style></head>
+
+<body>
+  <!-- 데스크탑용 헤더 -->
+  <header class="pc">
+    <div class="header-top">
+      <div class="common-frame">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./img/logo-white.svg" alt="NODA로고" />
+          </a>
+        </div>
+        <div class="lnb">
+          <ul class="user-menu">
+            <li>
+              <a href="#">
+                <img src="./img/icon-login.svg" alt="로그인 아이콘" />
+                <span>로그인</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./img/icon-signup.svg" alt="회원가입 아이콘" />
+                <span>회원가입</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./img/icon-search.svg" alt="검색 아이콘" />
+                <span>검색</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./img/icon-cart.svg" alt="장바구니 아이콘" />
+                <span>장바구니</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./img/icon-profile.svg" alt="마이페이지 아이콘" />
+                <span>마이페이지</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="header-bottom">
+        <div class="common-frame">
+          <ul class="gnb">
+            <li>
+              <a href="./index.html">HOME</a>
+            </li>
+            <li class="on">
+              <a href="./list.html">NEW</a>
+              <div class="gnb2depths">
+                <div class="common-frame">
+                  <section>
+                    <h4><a href="./list.html">신상품 전체</a></h4>
+                    <ul>
+                      <li><a href="./list.html">가구</a></li>
+                      <li><a href="./list.html">조명</a></li>
+                      <li><a href="./list.html">리빙</a></li>
+                      <li><a href="./list.html">주방</a></li>
+                      <li><a href="./list.html">패브릭</a></li>
+                      <li><a href="./list.html">데코</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">신규 브랜드</a></h4>
+                    <ul>
+                      <li><a href="./list.html">신규 입점 브랜드</a></li>
+                      <li><a href="./list.html">브랜드 추천</a></li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="./list.html">SHOP</a>
+              <div class="gnb2depths">
+                <div class="common-frame">
+                  <section>
+                    <h4><a href="./list.html">가구</a></h4>
+                    <ul>
+                      <li><a href="./list.html">소파</a></li>
+                      <li><a href="./list.html">의자</a></li>
+                      <li><a href="./list.html">테이블</a></li>
+                      <li><a href="./list.html">책상</a></li>
+                      <li><a href="./list.html">침대</a></li>
+                      <li><a href="./list.html">수납장</a></li>
+                      <li><a href="./list.html">선반</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">주방</a></h4>
+                    <ul>
+                      <li><a href="./list.html">식기</a></li>
+                      <li><a href="./list.html">머그컵</a></li>
+                      <li><a href="./list.html">접시</a></li>
+                      <li><a href="./list.html">볼</a></li>
+                      <li><a href="./list.html">조리도구</a></li>
+                      <li><a href="./list.html">텀블러</a></li>
+                      <li><a href="./list.html">주방 수납</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">조명</a></h4>
+                    <ul>
+                      <li><a href="./list.html">천장등</a></li>
+                      <li><a href="./list.html">팬던트 조명</a></li>
+                      <li><a href="./list.html">테이블 조명</a></li>
+                      <li><a href="./list.html">플로어 조명</a></li>
+                      <li><a href="./list.html">벽 조명</a></li>
+                      <li><a href="./list.html">전구</a></li>
+                      <li><a href="./list.html">LED 조명</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">홈데코</a></h4>
+                    <ul>
+                      <li><a href="./list.html">거울</a></li>
+                      <li><a href="./list.html">액자</a></li>
+                      <li><a href="./list.html">화병</a></li>
+                      <li><a href="./list.html">식물</a></li>
+                      <li><a href="./list.html">캔들</a></li>
+                      <li><a href="./list.html">디퓨저</a></li>
+                      <li><a href="./list.html">패브릭</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">커튼</a></h4>
+                    <ul>
+                      <li><a href="./list.html">러그</a></li>
+                      <li><a href="./list.html">쿠션</a></li>
+                      <li><a href="./list.html">담요</a></li>
+                      <li><a href="./list.html">침구</a></li>
+                      <li><a href="./list.html">수건</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">수납</a></h4>
+                    <ul>
+                      <li><a href="./list.html">책장</a></li>
+                      <li><a href="./list.html">서랍장</a></li>
+                      <li><a href="./list.html">옷장</a></li>
+                      <li><a href="./list.html">수납박스</a></li>
+                      <li><a href="./list.html">행거</a></li>
+                      <li><a href="./list.html">정리함</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">오피스</a></h4>
+                    <ul>
+                      <li><a href="./list.html">사무용 의자</a></li>
+                      <li><a href="./list.html">데스크 램프</a></li>
+                      <li><a href="./list.html">모니터 받침대</a></li>
+                      <li><a href="./list.html">데스크 정리함</a></li>
+                      <li><a href="./list.html">문구</a></li>
+                      <li><a href="./list.html">노트북 거치대</a></li>
+                      <li><a href="./list.html">메모보드</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">세일</a></h4>
+                    <ul>
+                      <li><a href="./list.html">오늘의 특가</a></li>
+                      <li><a href="./list.html">시즌오프</a></li>
+                      <li><a href="./list.html">최대 50% 할인</a></li>
+                      <li><a href="./list.html">1+1</a></li>
+                      <li><a href="./list.html">한정수량</a></li>
+                      <li><a href="./list.html">세트할인</a></li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="./list.html">COLLECTION</a>
+              <div class="gnb2depths">
+                <div class="common-frame">
+                  <section>
+                    <h4><a href="./list.html">시즌 컬렉션</a></h4>
+                    <ul>
+                      <li><a href="./list.html">봄</a></li>
+                      <li><a href="./list.html">여름</a></li>
+                      <li><a href="./list.html">가을</a></li>
+                      <li><a href="./list.html">겨울</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">라이프스타일</a></h4>
+                    <ul>
+                      <li><a href="./list.html">거실</a></li>
+                      <li><a href="./list.html">홈오피스</a></li>
+                      <li><a href="./list.html">침실</a></li>
+                      <li><a href="./list.html">주방</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">시그니처</a></h4>
+                    <ul>
+                      <li><a href="./list.html">거실</a></li>
+                      <li><a href="./list.html">프리미엄</a></li>
+                      <li><a href="./list.html">에센셜</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">디자이너</a></h4>
+                    <ul>
+                      <li><a href="./list.html">콜라보레이션</a></li>
+                      <li><a href="./list.html">리미티드 에디션</a></li>
+                      <li><a href="./list.html">아티스트 컬렉션</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">테마별</a></h4>
+                    <ul>
+                      <li><a href="./list.html">미니멀</a></li>
+                      <li><a href="./list.html">모던</a></li>
+                      <li><a href="./list.html">내추럴</a></li>
+                      <li><a href="./list.html">빈티지</a></li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="./list.html">MAGAZINE</a>
+              <div class="gnb2depths">
+                <div class="common-frame">
+                  <section>
+                    <h4><a href="./list.html">인테리어</a></h4>
+                    <ul>
+                      <li><a href="./list.html">거실</a></li>
+                      <li><a href="./list.html">침실</a></li>
+                      <li><a href="./list.html">주방</a></li>
+                      <li><a href="./list.html">홈오피스</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">스타일링</a></h4>
+                    <ul>
+                      <li><a href="./list.html">컬러 매치</a></li>
+                      <li><a href="./list.html">가구 배치</a></li>
+                      <li><a href="./list.html">공간 꾸미기</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">트렌드</a></h4>
+                    <ul>
+                      <li><a href="./list.html">2026 인테리어 트렌드</a></li>
+                      <li><a href="./list.html">인기 스타일</a></li>
+                      <li><a href="./list.html">디자인 뉴스</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">인터뷰</a></h4>
+                    <ul>
+                      <li><a href="./list.html">디자이너 인터뷰</a></li>
+                      <li><a href="./list.html">브랜드 스토리</a></li>
+                      <li><a href="./list.html">고객 이야기</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">팁 &amp; 가이드</a></h4>
+                    <ul>
+                      <li><a href="./list.html">가구 관리법</a></li>
+                      <li><a href="./list.html">구매 가이드</a></li>
+                      <li><a href="./list.html">공간 활용법</a></li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="./list.html">EVENT</a>
+              <div class="gnb2depths">
+                <div class="common-frame">
+                  <section>
+                    <h4><a href="./list.html">진행 중인 이벤트</a></h4>
+                    <ul>
+                      <li><a href="./list.html">할인 행사</a></li>
+                      <li><a href="./list.html">시즌 기획전</a></li>
+                      <li><a href="./list.html">브랜드 기획전</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">쿠폰 &amp; 혜택</a></h4>
+                    <ul>
+                      <li><a href="./list.html">신규 회원 혜택</a></li>
+                      <li><a href="./list.html">회원 전용 쿠폰</a></li>
+                      <li><a href="./list.html">등급별 혜택</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">특별전</a></h4>
+                    <ul>
+                      <li><a href="./list.html">신제품 런칭</a></li>
+                      <li><a href="./list.html">한정 특가</a></li>
+                      <li><a href="./list.html">타임세일</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">이벤트 참여</a></h4>
+                    <ul>
+                      <li><a href="./list.html">리뷰 이벤트</a></li>
+                      <li><a href="./list.html">SNS 이벤트</a></li>
+                      <li><a href="./list.html">출석체크</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./list.html">당첨자 발표</a></h4>
+                    <ul>
+                      <li><a href="./list.html">이벤트 당첨자</a></li>
+                      <li><a href="./list.html">종료 이벤트</a></li>
+                      <li><a href="./list.html">이벤트 안내</a></li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="./about.html">ABOUT</a>
+              <div class="gnb2depths">
+                <div class="common-frame">
+                  <section>
+                    <h4><a href="./about.html">NODA STORY</a></h4>
+                    <ul>
+                      <li><a href="./about.html">브랜드 소개</a></li>
+                      <li><a href="./about.html">브랜드 철학</a></li>
+                      <li><a href="./about.html">브랜드 히스토리</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./about.html">지속 가능성</a></h4>
+                    <ul>
+                      <li><a href="./about.html">친환경 소재</a></li>
+                      <li><a href="./about.html">ESG 경영</a></li>
+                      <li><a href="./about.html">사회공헌</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./about.html">오프라인</a></h4>
+                    <ul>
+                      <li><a href="./about.html">쇼룸 안내</a></li>
+                      <li><a href="./about.html">매장 찾기</a></li>
+                      <li><a href="./about.html">팝업 스토어</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./about.html">고객지원</a></h4>
+                    <ul>
+                      <li><a href="./about.html">공지사항</a></li>
+                      <li><a href="./about.html">자주 묻는 질문</a></li>
+                      <li><a href="./about.html">1:1 문의</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4><a href="./about.html">배송 &amp; 제휴</a></h4>
+                    <ul>
+                      <li><a href="./about.html">배송 안내</a></li>
+                      <li><a href="./about.html">제휴 문의</a></li>
+                      <li><a href="./about.html">일정 문의</a></li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 패드 / 모바일용 헤더 -->
+  <div class="smart-header">
+    <div class="common-frame">
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./img/logo-white.svg" alt="로고 이미지" />
+        </a>
+      </div>
+      <div class="btn-menu">
+        <a href="#">
+          <img src="./img/icon-menu.svg" alt="전체 메뉴 열기" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 패드 / 모바일용 전체 메가메뉴 -->
+  <div class="smart-overlay-menu">
+    <div class="smart-overlay-menu-1">
+      <div class="common-frame">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./img/logo-white.svg" alt="로고 이미지" />
+          </a>
+        </div>
+        <div class="btn-close">
+          <a href="#">
+            <img src="./img/icon-close.svg" alt="전체 메뉴 닫기" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="smart-overlay-menu-2">
+      <div class="common-frame">
+        <ul class="user-menu">
+          <li>
+            <a href="#">
+              <img src="./img/icon-login.svg" alt="로그인 아이콘" />
+              <span>로그인</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/icon-signup.svg" alt="회원가입 아이콘" />
+              <span>회원가입</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/icon-search.svg" alt="검색 아이콘" />
+              <span>검색</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/icon-cart.svg" alt="장바구니 아이콘" />
+              <span>장바구니</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/icon-profile.svg" alt="마이페이지 아이콘" />
+              <span>마이페이지</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="smart-overlay-menu-top">
+      <div class="common-frame">
+        <ul class="gnb-smart">
+          <li><a href="./list.html">NEW</a></li>
+          <li><a href="./list.html">SHOP</a></li>
+          <li><a href="./list.html">COLLECTIONS</a></li>
+          <li><a href="./list.html">MAGAZINE</a></li>
+          <li><a href="./list.html">EVENT</a></li>
+          <li><a href="./about.html">ABOUT</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="smart-overlay-menu-bottom">
+      <div class="gnb2depths-smart">
+        <div class="common-frame">
+          <section>
+            <h4><a href="./list.html">신상품 전체</a></h4>
+            <ul>
+              <li><a href="./list.html">가구</a></li>
+              <li><a href="./list.html">조명</a></li>
+              <li><a href="./list.html">리빙</a></li>
+              <li><a href="./list.html">주방</a></li>
+              <li><a href="./list.html">패브릭</a></li>
+              <li><a href="./list.html">데코</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">신규 브랜드</a></h4>
+            <ul>
+              <li><a href="./list.html">신규 입점 브랜드</a></li>
+              <li><a href="./list.html">브랜드 추천</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <div class="gnb2depths-smart">
+        <div class="common-frame">
+          <section>
+            <h4><a href="./list.html">가구</a></h4>
+            <ul>
+              <li><a href="./list.html">소파</a></li>
+              <li><a href="./list.html">의자</a></li>
+              <li><a href="./list.html">테이블</a></li>
+              <li><a href="./list.html">책상</a></li>
+              <li><a href="./list.html">침대</a></li>
+              <li><a href="./list.html">수납장</a></li>
+              <li><a href="./list.html">선반</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">주방</a></h4>
+            <ul>
+              <li><a href="./list.html">식기</a></li>
+              <li><a href="./list.html">머그컵</a></li>
+              <li><a href="./list.html">접시</a></li>
+              <li><a href="./list.html">볼</a></li>
+              <li><a href="./list.html">조리도구</a></li>
+              <li><a href="./list.html">텀블러</a></li>
+              <li><a href="./list.html">주방 수납</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">조명</a></h4>
+            <ul>
+              <li><a href="./list.html">천장등</a></li>
+              <li><a href="./list.html">팬던트 조명</a></li>
+              <li><a href="./list.html">테이블 조명</a></li>
+              <li><a href="./list.html">플로어 조명</a></li>
+              <li><a href="./list.html">벽 조명</a></li>
+              <li><a href="./list.html">전구</a></li>
+              <li><a href="./list.html">LED 조명</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">홈데코</a></h4>
+            <ul>
+              <li><a href="./list.html">거울</a></li>
+              <li><a href="./list.html">액자</a></li>
+              <li><a href="./list.html">화병</a></li>
+              <li><a href="./list.html">식물</a></li>
+              <li><a href="./list.html">캔들</a></li>
+              <li><a href="./list.html">디퓨저</a></li>
+              <li><a href="./list.html">패브릭</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">커튼</a></h4>
+            <ul>
+              <li><a href="./list.html">러그</a></li>
+              <li><a href="./list.html">쿠션</a></li>
+              <li><a href="./list.html">담요</a></li>
+              <li><a href="./list.html">침구</a></li>
+              <li><a href="./list.html">수건</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">수납</a></h4>
+            <ul>
+              <li><a href="./list.html">책장</a></li>
+              <li><a href="./list.html">서랍장</a></li>
+              <li><a href="./list.html">옷장</a></li>
+              <li><a href="./list.html">수납박스</a></li>
+              <li><a href="./list.html">행거</a></li>
+              <li><a href="./list.html">정리함</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">오피스</a></h4>
+            <ul>
+              <li><a href="./list.html">사무용 의자</a></li>
+              <li><a href="./list.html">데스크 램프</a></li>
+              <li><a href="./list.html">모니터 받침대</a></li>
+              <li><a href="./list.html">데스크 정리함</a></li>
+              <li><a href="./list.html">문구</a></li>
+              <li><a href="./list.html">노트북 거치대</a></li>
+              <li><a href="./list.html">메모보드</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">세일</a></h4>
+            <ul>
+              <li><a href="./list.html">오늘의 특가</a></li>
+              <li><a href="./list.html">시즌오프</a></li>
+              <li><a href="./list.html">최대 50% 할인</a></li>
+              <li><a href="./list.html">1+1</a></li>
+              <li><a href="./list.html">한정수량</a></li>
+              <li><a href="./list.html">세트할인</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <div class="gnb2depths-smart">
+        <div class="common-frame">
+          <section>
+            <h4><a href="./list.html">시즌 컬렉션</a></h4>
+            <ul>
+              <li><a href="./list.html">봄</a></li>
+              <li><a href="./list.html">여름</a></li>
+              <li><a href="./list.html">가을</a></li>
+              <li><a href="./list.html">겨울</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">라이프스타일</a></h4>
+            <ul>
+              <li><a href="./list.html">거실</a></li>
+              <li><a href="./list.html">홈오피스</a></li>
+              <li><a href="./list.html">침실</a></li>
+              <li><a href="./list.html">주방</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">시그니처</a></h4>
+            <ul>
+              <li><a href="./list.html">거실</a></li>
+              <li><a href="./list.html">프리미엄</a></li>
+              <li><a href="./list.html">에센셜</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">디자이너</a></h4>
+            <ul>
+              <li><a href="./list.html">콜라보레이션</a></li>
+              <li><a href="./list.html">리미티드 에디션</a></li>
+              <li><a href="./list.html">아티스트 컬렉션</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">테마별</a></h4>
+            <ul>
+              <li><a href="./list.html">미니멀</a></li>
+              <li><a href="./list.html">모던</a></li>
+              <li><a href="./list.html">내추럴</a></li>
+              <li><a href="./list.html">빈티지</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <div class="gnb2depths-smart">
+        <div class="common-frame">
+          <section>
+            <h4><a href="./list.html">인테리어</a></h4>
+            <ul>
+              <li><a href="./list.html">거실</a></li>
+              <li><a href="./list.html">침실</a></li>
+              <li><a href="./list.html">주방</a></li>
+              <li><a href="./list.html">홈오피스</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">스타일링</a></h4>
+            <ul>
+              <li><a href="./list.html">컬러 매치</a></li>
+              <li><a href="./list.html">가구 배치</a></li>
+              <li><a href="./list.html">공간 꾸미기</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">트렌드</a></h4>
+            <ul>
+              <li><a href="./list.html">2026 인테리어 트렌드</a></li>
+              <li><a href="./list.html">인기 스타일</a></li>
+              <li><a href="./list.html">디자인 뉴스</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">인터뷰</a></h4>
+            <ul>
+              <li><a href="./list.html">디자이너 인터뷰</a></li>
+              <li><a href="./list.html">브랜드 스토리</a></li>
+              <li><a href="./list.html">고객 이야기</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">팁 &amp; 가이드</a></h4>
+            <ul>
+              <li><a href="./list.html">가구 관리법</a></li>
+              <li><a href="./list.html">구매 가이드</a></li>
+              <li><a href="./list.html">공간 활용법</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <div class="gnb2depths-smart">
+        <div class="common-frame">
+          <section>
+            <h4><a href="./list.html">진행 중인 이벤트</a></h4>
+            <ul>
+              <li><a href="./list.html">할인 행사</a></li>
+              <li><a href="./list.html">시즌 기획전</a></li>
+              <li><a href="./list.html">브랜드 기획전</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">쿠폰 &amp; 혜택</a></h4>
+            <ul>
+              <li><a href="./list.html">신규 회원 혜택</a></li>
+              <li><a href="./list.html">회원 전용 쿠폰</a></li>
+              <li><a href="./list.html">등급별 혜택</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">특별전</a></h4>
+            <ul>
+              <li><a href="./list.html">신제품 런칭</a></li>
+              <li><a href="./list.html">한정 특가</a></li>
+              <li><a href="./list.html">타임세일</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">이벤트 참여</a></h4>
+            <ul>
+              <li><a href="./list.html">리뷰 이벤트</a></li>
+              <li><a href="./list.html">SNS 이벤트</a></li>
+              <li><a href="./list.html">출석체크</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./list.html">당첨자 발표</a></h4>
+            <ul>
+              <li><a href="./list.html">이벤트 당첨자</a></li>
+              <li><a href="./list.html">종료 이벤트</a></li>
+              <li><a href="./list.html">이벤트 안내</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <div class="gnb2depths-smart">
+        <div class="common-frame">
+          <section>
+            <h4><a href="./about.html">NODA STORY</a></h4>
+            <ul>
+              <li><a href="./about.html">브랜드 소개</a></li>
+              <li><a href="./about.html">브랜드 철학</a></li>
+              <li><a href="./about.html">브랜드 히스토리</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./about.html">지속 가능성</a></h4>
+            <ul>
+              <li><a href="./about.html">친환경 소재</a></li>
+              <li><a href="./about.html">ESG 경영</a></li>
+              <li><a href="./about.html">사회공헌</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./about.html">오프라인</a></h4>
+            <ul>
+              <li><a href="./about.html">쇼룸 안내</a></li>
+              <li><a href="./about.html">매장 찾기</a></li>
+              <li><a href="./about.html">팝업 스토어</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./about.html">고객지원</a></h4>
+            <ul>
+              <li><a href="./about.html">공지사항</a></li>
+              <li><a href="./about.html">자주 묻는 질문</a></li>
+              <li><a href="./about.html">1:1 문의</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4><a href="./about.html">배송 &amp; 제휴</a></h4>
+            <ul>
+              <li><a href="./about.html">배송 안내</a></li>
+              <li><a href="./about.html">제휴 문의</a></li>
+              <li><a href="./about.html">일정 문의</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- 배너 -->
+    <div class="banner-design">
+      <div class="banner">
+        <figure class="pc">
+          <img src="./img/list-banner-pc.jpg" alt="pc 배너 이미지" />
+        </figure>
+      </div>
+      <div class="banner">
+        <figure class="pad">
+          <img src="./img/list-banner-pad.jpg" alt="pad 배너 이미지" />
+        </figure>
+      </div>
+      <div class="banner">
+        <figure class="mobile">
+          <img src="./img/list-banner-mo.jpg" alt="mobile 배너 이미지" />
+        </figure>
+      </div>
+    </div>
+
+
+    <!-- 컨텐츠 영역 -->
+    <section class="con1">
+      <!-- 제목 / 설명 -->
+      <div class="common-frame">
+        <div class="con1">
+          <div class="main-text">
+            <h1>공간의 가치를 높이다</h1>
+          </div>
+          <div class="sub-text">
+            <p>감각적인 디자인과 섬세한 디테일이 돋보이는 NODA의 신제품들</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 상품 카드리스트 -->
+    <section class="con2">
+      <div class="common-frame">
+        <ul>
+          <li class="card-list">
+            <a href="./product.html?pid=1">
+              <figure>
+                <img src="./img/list-1.png" alt="상품 리스트 이미지 1번">
+              </figure>
+              <div class="section-1">
+                <div class="catagory">
+                  <p>테이블</p>
+                </div>
+                <div class="product-name">
+                  <h4>루버 오발 원목 식탁 (6인용)</h4>
+                </div>
+                <div class="product-sub-text">
+                  <p>입체적인 템바보드 다리와 부드러운 라운드 상판이 돋보이는 프리미엄 오크 원목 테이블</p>
+                </div>
+                <div class="price">
+                  <div class="pay-original">
+                    <span>100,000</span>원
+                  </div>
+                  <div class="pay-discount">
+                    <div class="discount">30%</div>
+                    <div class="pay">70,000원</div>
+                  </div>
+                </div>
+              </div>
+              <div class="section-2">
+                <figure>
+                  <img src="./img/heart-r.svg" alt="좋아요 하트">
+                </figure>
+                <div class="like-txt">
+                  <p>62</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- 푸터 영역 -->
+  <footer>
+    <div class="common-frame footer-dark">
+      <div class="foot-top">
+        <ul class="foot-menu1">
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이메일무단수집거부</a></li>
+          <li><a href="#">사업자정보확인</a></li>
+        </ul>
+        <div class="foot-main">
+          <dl class="company-info">
+            <div class="info-row">
+              <dt>회사명</dt>
+              <dd>(주)노다 (NODA Co., Ltd.)</dd>
+            </div>
+            <div class="info-row">
+              <dt>대표</dt>
+              <dd>김현아</dd>
+            </div>
+            <div class="info-row">
+              <dt>사업자 번호</dt>
+              <dd>777-77-77777</dd>
+            </div>
+            <div class="info-row">
+              <dt>통신판매업신고</dt>
+              <dd>제2026-서울포트폴리오-1182호</dd>
+            </div>
+            <div class="info-row">
+              <dt>주소</dt>
+              <dd>서울특별시 강남구 도산대로 328, NODA BUILDING 8F</dd>
+            </div>
+            <div class="info-row">
+              <dt>대표번호</dt>
+              <dd>1588-2026</dd>
+            </div>
+            <div class="info-row">
+              <dt>이메일</dt>
+              <dd>noda77@noda.com</dd>
+            </div>
+            <div class="info-row">
+              <dt>개인정보관리책임자</dt>
+              <dd>김현아</dd>
+            </div>
+          </dl>
+
+          <div class="cs-block">
+            <dl class="customer-service">
+              <div class="info-row">
+                <p>고객센터 1588-2026</p>
+              </div>
+              <div class="info-row">
+                <dt>평일</dt>
+                <dd>09:30 - 18:00</dd>
+              </div>
+              <div class="info-row">
+                <dt>점심시간</dt>
+                <dd>12:00 - 13:00</dd>
+              </div>
+              <div class="info-row">
+                <p>토/일/공휴일 휴무</p>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <figure>
+          <img src="./img/logo-black.svg" alt="로고 이미지">
+        </figure>
+        <div class="txt">
+          <h3>Smart Solutions for Small Spaces.</h3>
+          <p>좁은 방도 넓고 스타일리시하게.<br>
+            NODA는 1인 가구의 라이프스타일에 딱 맞춘 실용적인 공간 디자인을 선보입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="txt">
+          <p>© 2026 NODA. All Rights Reserved. 취업용도의 포트폴리오 홈페이지입니다.</p>
+        </div>
+        <figure>
+          <img src="./img/youtube.svg" alt="유튜브 아이콘">
+          <img src="./img/instagram.svg" alt="인스타그램 아이콘">
+        </figure>
+      </div>
+    </div>
+  </footer>
+<script>document.querySelectorAll('.modal,.popup,.main-popup').forEach(node=>node.remove());</script></body>
+
+</html>

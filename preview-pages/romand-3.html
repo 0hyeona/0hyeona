@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<base href="https://romand-alpha.vercel.app/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rom&nd 리디자인</title>
+    <!-- css 연결 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/btn-top.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+    <!-- js 연결 -->
+    <script src="./js/header.js" defer></script>
+    <script src="./js/btn-top.js" defer></script>
+
+    <!-- 구매 프로세스 -->
+    <link rel="stylesheet" href="./css/buy-process.css">
+    <script src="./js/buy-process.js"></script>
+
+    <link rel="stylesheet" href="./css/option.css" />
+    <script src="./js/product-card-list.js" defer></script>
+    <script src="./js/product-detail.js" defer></script>
+    <script src="./js/option.js" defer></script>
+
+    <!-- 띠배너 연결 -->
+    <link rel="stylesheet" href="./css/toss-banner.css">
+    <link rel="stylesheet" href="./css/sangpage.css">
+
+    <!-- 리뷰 연결 -->
+    <link rel="stylesheet" href="./css/review.css">
+    <script src="./js/review.js" defer></script>
+
+    <!-- 파비콘 -->
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+<style>html,body{overflow:auto!important;scroll-behavior:auto!important}.modal,.popup,.main-popup{display:none!important}</style></head>
+
+<body>
+    <!-- 데스크탑용 헤더 -->
+    <header class="pc">
+        <div class="header-top">
+        <div class="common-frame back">
+            <div class="logo">
+            <a href="./index.html">
+                <img src="./img/logo.svg" alt="롬앤 메인 로고" />
+            </a>
+            </div>
+            <ul class="user-menu">
+            <div class="lnb">
+                <div class="search-box" aria-label="검색창">
+                <label class="search-field" aria-label="검색어 입력">
+                    <input type="text" placeholder="검색어를 입력해주세요" />
+                </label>
+                <button class="search-toggle" type="button" aria-label="검색 열기">
+                    <img src="./img/icon-search.svg" alt="검색 아이콘" />
+                </button>
+                </div>
+                <li>
+                <a href="./index-4.html">
+                    <img src="./img/icon-cart.svg" alt="장바구니 아이콘" />
+                </a>
+                </li>
+                <li>
+                <a href="./index-6.html">
+                    <img src="./img/icon-profile.svg" alt="마이페이지 아이콘" />
+                </a>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div class="header-bottom">
+        <div class="common-frame">
+            <ul class="gnb">
+            <!-- ALL -->
+            <li>
+                <a href="./index.html">ALL</a>
+                <div class="gnb2depths">
+                <div class="common-frame">
+                    <section>
+                    </section>
+                </div>
+                </div>
+            </li>
+            <!-- NEW -->
+            <li>
+                <a href="./index-2.html">NEW</a>
+                <div class="gnb2depths">
+                <div class="common-frame">
+                    <section>
+                    <h4><a href="./index-2.html">NEW</a></h4>
+                    </section>
+                    <section>
+                    <h4><a href="./index-2.html">신제품</a></h4>
+                    <ul>
+                        <li><a href="./index-2.html">전체 신제품</a></li>
+                        <li><a href="./index-2.html">이달의 신제품</a></li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h4>콜라보</h4>
+                    <ul>
+                        <li><a href="#">시즌 컬렉션</a></li>
+                        <li><a href="#">한정판 에디션</a></li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h4><a href="#">재입고</a></h4>
+                    <ul>
+                        <li><a href="#">인기 재입고</a></li>
+                        <li><a href="#">단종 귀환 아이템</a></li>
+                    </ul>
+                    </section>
+                </div>
+                </div>
+            </li>
+            <!-- SHOP -->
+            <li>
+                <a href="./index-2.html">SHOP</a>
+                <div class="gnb2depths">
+                <div class="common-frame">
+                    <section>
+                    <h4><a href="./index-2.html">SHOP</a></h4>
+                    </section>
+                    <section>
+                    <h4><a href="./index-2.html">LIP</a></h4>
+                    <ul>
+                        <li><a href="./index-2.html">틴트</a></li>
+                        <li><a href="./index-2.html">립스틱</a></li>
+                        <li><a href="./index-2.html">립글로즈/립밤</a></li>
+                        <li><a href="./index-2.html">립라이너</a></li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h4>EYE</h4>
+                    <ul>
+                        <li><a href="#">아이섀도우</a></li>
+                        <li><a href="#">마스카라</a></li>
+                        <li><a href="#">아이라이너</a></li>
+                        <li><a href="#">브로우</a></li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h4><a href="#">FACE</a></h4>
+                    <ul>
+                        <li><a href="#">쿠션 / 파운데이션</a></li>
+                        <li><a href="#">파우더 / 팩트</a></li>
+                        <li><a href="#">블러셔</a></li>
+                        <li><a href="#">쉐딩 / 하이라이터</a></li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h4><a href="#">TOOL & ACC</a></h4>
+                    <ul>
+                        <li><a href="#">브러쉬 / 퍼프</a></li>
+                        <li><a href="#">뷰티 툴</a></li>
+                        <li><a href="#">브랜드 굿즈</a></li>
+                    </ul>
+                    </section>
+                </div>
+                </div>
+            </li>
+            <!-- EVENT -->
+            <li>
+                <a href="./index-2.html">EVENT</a>
+                <div class="gnb2depths">
+                <div class="common-frame">
+                    <section>
+                    <h4><a href="#">EVENT</a></h4>
+                    </section>
+                    <section>
+                    <h4><a href="#">기획전</a></h4>
+                    <ul>
+                        <li><a href="#">진행 중인 기획전</a></li>
+                        <li><a href="#">세일 특가</a></li>
+                        <li><a href="#">예약 판매</a></li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h4>혜택</h4>
+                    <ul>
+                        <li><a href="#">회원 등급별 혜택</a></li>
+                        <li><a href="#">쿠폰존</a></li>
+                        <li><a href="#">출석체크</a></li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h4><a href="#">리뷰</a></h4>
+                    <ul>
+                        <li><a href="#">베스트 리뷰</a></li>
+                        <li><a href="#">실시간 포토 리뷰</a></li>
+                    </ul>
+                    </section>
+                </div>
+                </div>
+            </li>
+            <!-- ABOUT US -->
+            <li>
+                <a href="./index.html">ABOUT US</a>
+                <div class="gnb2depths">
+                <div class="common-frame">
+                    <section>
+                    <h4><a href="#">ABOUT US</a></h4>
+                    </section>
+                    <section>
+                    <h4><a href="#">브랜드 소개</a></h4>
+                    <ul>
+                        <li><a href="#">브랜드 컬러</a></li>
+                        <li><a href="#">세일 특가</a></li>
+                        <li><a href="#">예약 판매</a></li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h4>컬러링</h4>
+                    <ul>
+                        <li><a href="#">웜톤 추천</a></li>
+                        <li><a href="#">쿨톤 추천</a></li>
+                        <li><a href="#">퍼스널컬러 진단 가이드</a></li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h4><a href="#">매장 안내</a></h4>
+                    <ul>
+                        <li><a href="#">국내 매장</a></li>
+                        <li><a href="#">해외 매장</a></li>
+                    </ul>
+                    </section>
+                    <section>
+                    <h4><a href="#">고객 지원</a></h4>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">1:1 문의</a></li>
+                    </ul>
+                    </section>
+                </div>
+                </div>
+            </li>
+            </ul>
+        </div>
+        </div>
+        </div>
+    </header>
+
+    <!-- 패드 / 모바일용 헤더  -->
+    <div class="smart-header">
+        <div class="common-frame">
+        <div class="logo">
+            <a href="./index.html">
+            <img src="./img/logo.svg" alt="롬앤 메인 로고" />
+            </a>
+        </div>
+        <div class="btn-menu">
+            <a href="#">
+            <img src="./img/icon-menubar.svg" alt="전체 메뉴 열기" />
+            </a>
+        </div>
+        </div>
+    </div>
+
+    <!-- 패드 / 모바일용 전체 메가메뉴 -->
+    <div class="smart-overlay-menu">
+        <div class="smart-overlay-menu-1">
+        <div class="common-frame">
+            <div class="logo">
+            <a href="./index.html">
+                <img src="./img/logo.svg" alt="롬앤 메인 로고" />
+            </a>
+            </div>
+            <div class="btn-close">
+            <a href="#">
+                <img src="./img/icon-close.svg" alt="전체 메뉴 닫기" />
+            </a>
+            </div>
+        </div>
+        </div>
+        <div class="smart-overlay-menu-2">
+        <div class="common-frame">
+            <div class="user-menu">
+            <div class="search-box" aria-label="검색창">
+                <label class="search-field" aria-label="검색어 입력">
+                <input type="text" placeholder="검색어를 입력해주세요" />
+                </label>
+                <button class="search-toggle" type="button" aria-label="검색 열기">
+                <img src="./img/icon-search.svg" alt="검색 아이콘" />
+                </button>
+            </div>
+            <a href="#">
+                <img src="./img/icon-cart.svg" alt="장바구니 아이콘" />
+            </a>
+            <a href="./index-6.html">
+                <img src="./img/icon-profile.svg" alt="마이페이지 아이콘" />
+            </a>
+            </div>
+        </div>
+        </div>
+        <div class="smart-overlay-menu-top">
+        <div class="common-frame">
+            <ul class="gnb-smart">
+            <li class="on"><a href="./index-2.html">NEW</a></li>
+            <li><a href="./index-2.html">SHOP</a></li>
+            <li><a href="./index-2.html">EVENT</a></li>
+            <li><a href="./index.html">ABOUT US</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="smart-overlay-menu-bottom">
+        <ul class="gnb-smart-list">
+            <!-- 1 NEW -->
+            <li>
+            <a href="./index-2.html" class="gnb-smart-title">NEW</a>
+            <div class="gnb2depths-smart">
+                <div class="common-frame">
+                <section>
+                    <h4><a href="./index-2.html">신상품</a></h4>
+                    <ul>
+                    <li><a href="./index-2.html">전체 신제품</a></li>
+                    <li><a href="./index-2.html">이달의 신제품</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4><a href="#">콜라보</a></h4>
+                    <ul>
+                    <li><a href="#">시즌 컬렉션</a></li>
+                    <li><a href="#">한정판 에디션</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4><a href="#">재입고</a></h4>
+                    <ul>
+                    <li><a href="#">인기 재입고</a></li>
+                    <li><a href="#">단종 귀환 아이템</a></li>
+                    </ul>
+                </section>
+                </div>
+            </div>
+            </li>
+            <!-- 2 SHOP -->
+            <li>
+            <a href="./index-2.html" class="gnb-smart-title">SHOP</a>
+            <div class="gnb2depths-smart">
+                <div class="common-frame">
+                <section>
+                    <h4><a href="./index-2.html">LIP</a></h4>
+                    <ul>
+                    <li><a href="./index-2.html">틴트</a></li>
+                    <li><a href="./index-2.html">립스틱</a></li>
+                    <li><a href="./index-2.html">립글로즈 / 립밤</a></li>
+                    <li><a href="./index-2.html">립 라이너</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4><a href="#">EYE</a></h4>
+                    <ul>
+                    <li><a href="#">아이섀도우</a></li>
+                    <li><a href="#">마스카라</a></li>
+                    <li><a href="#">아이라이너</a></li>
+                    <li><a href="#">브로우</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4><a href="#">FACE</a></h4>
+                    <ul>
+                    <li><a href="#">쿠션 / 파운데이션</a></li>
+                    <li><a href="#">파우더 / 팩트</a></li>
+                    <li><a href="#">블러셔</a></li>
+                    <li><a href="#">쉐딩 / 하이라이터</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4><a href="#">TOOL</a></h4>
+                    <ul>
+                    <li><a href="#">브러쉬 / 퍼프</a></li>
+                    <li><a href="#">뷰티 툴</a></li>
+                    <li><a href="#">브랜드 굿즈</a></li>
+                    </ul>
+                </section>
+                </div>
+            </div>
+            </li>
+            <!-- 3 EVENT -->
+            <li>
+            <a href="./index-2.html" class="gnb-smart-title">EVENT</a>
+            <div class="gnb2depths-smart">
+                <div class="common-frame">
+                <section>
+                    <h4><a href="#">기획전</a></h4>
+                    <ul>
+                    <li><a href="#">진행 중인 기획전</a></li>
+                    <li><a href="#">세일 특가</a></li>
+                    <li><a href="#">예약 판매</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4><a href="#">혜택</a></h4>
+                    <ul>
+                    <li><a href="#">회원 등급별 혜택</a></li>
+                    <li><a href="#">쿠폰존</a></li>
+                    <li><a href="#">출석체크</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4><a href="#">리뷰</a></h4>
+                    <ul>
+                    <li><a href="#">베스트 리뷰</a></li>
+                    <li><a href="#">실시간 포토 리뷰</a></li>
+                    </ul>
+                </section>
+                </div>
+            </div>
+            </li>
+            <!-- 4 ABOUT US -->
+            <li>
+            <a href="./index.html" class="gnb-smart-title">ABOUT US</a>
+            <div class="gnb2depths-smart">
+                <div class="common-frame">
+                <section>
+                    <h4><a href="#">브랜드 소개</a></h4>
+                    <ul>
+                    <li><a href="#">브랜드 컬러</a></li>
+                    <li><a href="#">캠페인</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4><a href="#">컬러링</a></h4>
+                    <ul>
+                    <li><a href="#">웜톤 추천</a></li>
+                    <li><a href="#">쿨톤 추천</a></li>
+                    <li><a href="#">퍼스널 컬러 진단 가이드</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4><a href="#">매장 안내</a></h4>
+                    <ul>
+                    <li><a href="#">국내 매장</a></li>
+                    <li><a href="#">국외 매장</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4><a href="#">고객 지원</a></h4>
+                    <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">1:1 문의</a></li>
+                    </ul>
+                </section>
+                </div>
+            </div>
+            </li>
+        </ul>
+        </div>
+    </div>
+    <main>
+        <!-- 구매 프로세스 -->
+        <div class="common-frame product-detail-layout">
+            <section class="product-gallery" aria-label="상품 이미지 갤러리">
+                <div class="big-img">
+                    <img src="./img/buy-6.jpg" alt="메인 상품 이미지">
+                </div>
+                <div class="small-img-wrap">
+                    <ul class="small-img-list" aria-label="상품 썸네일 목록">
+                        <li><img src="./img/buy-1.jpg" alt="썸네일 이미지 1"></li>
+                        <li><img src="./img/buy-2.jpg" alt="썸네일 이미지 2"></li>
+                        <li><img src="./img/buy-3.jpg" alt="썸네일 이미지 3"></li>
+                        <li><img src="./img/buy-4.jpg" alt="썸네일 이미지 4"></li>
+                        <li><img src="./img/buy-5.jpg" alt="썸네일 이미지 5"></li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="product-info" aria-label="상품 정보">
+                <div class="product-header">
+                    <p class="product-category">LIP</p>
+                    <div class="product-title-wrap">
+                        <p>롬앤 글래스팅 컬러 글로스</p>
+                        <div class="share-btn">
+                            <img src="./img/share.jpg" alt="공유하기 아이콘">
+                        </div>
+                    </div>
+                    <div class="product-price-box">
+                        <div class="original-price">13,000원</div>
+                        <div class="sale-row">
+                            <span class="discount-rate">28%</span>
+                            <span class="final-price">9,400원</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <section class="option-demo">
+                    <div class="option-box stage-1">
+                        <p class="option-label">본품/리필/기타 정보</p>
+
+                        <div class="option-select">
+                            <button type="button" class="option-trigger" aria-label="옵션 선택 열기">
+                                <span class="option-color option-color-empty"></span>
+                                <span class="option-value">[필수] 옵션을 선택해주세요.</span>
+                                <span class="option-icon">
+                                    <img src="./img/down.svg" alt="열기" />
+                                </span>
+                            </button>
+
+                            <div class="option-list">
+                                <button type="button" class="option-item" data-name="피오니 발레">
+                                    <span class="option-color option-color-pink1"></span>
+                                    피오니 발레
+                                </button>
+                                <button type="button" class="option-item" data-name="더티 베이그">
+                                    <span class="option-color option-color-pink2"></span>
+                                    더티 베이그
+                                </button>
+                                <button type="button" class="option-item" data-name="로즈 핀치">
+                                    <span class="option-color option-color-pink3"></span>
+                                    로즈 핀치
+                                </button>
+                                <button type="button" class="option-item" data-name="그레이피 웨이">
+                                    <span class="option-color option-color-pink4"></span>
+                                    그레이피 웨이
+                                </button>
+                                <button type="button" class="option-item" data-name="딤 모브">
+                                    <span class="option-color option-color-pink5"></span>
+                                    딤 모브
+                                </button>
+                                <button type="button" class="option-item" data-name="디픈 무어">
+                                    <span class="option-color option-color-pink6"></span>
+                                    디픈 무어
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="option-summary">
+                            <div class="pro-name">
+                                <p>상품명</p>
+                            </div>
+                            <div class="pro-desc">
+                                <p>상품 정보</p>
+                            </div>
+                            <div class="pro-list">
+                                <div class="counter">
+                                    <img src="./img/minus.svg" alt="minus" />
+                                    <span>1</span>
+                                    <img src="./img/plus.svg" alt="plus" />
+                                </div>
+                                <div class="price">
+                                    <div class="money">9,400</div>
+                                    <div class="won">원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="purchase-summary">
+                    <p>총 금액</p>
+                    <p>0원</p>
+                </div>
+
+                <div class="purchase-actions">
+                    <a href="./index-4.html" class="btn btn-secondary">장바구니</a>
+                    <a href="./index-5.html" class="btn btn-primary">구매하기</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 때 배너 디자인 -->
+        <div class="banner-img">
+            <div class="pc">
+                <figure>
+                    <img src="./img/toss-banner-pc.jpg" alt="토스 띠배너 pc">
+                </figure>
+            </div>
+            <div class="pad">
+                <figure>
+                    <img src="./img/toss-banner-pad.jpg" alt="토스 띠배너 pad">
+                </figure>
+            </div>
+            <div class="mobile">
+                <figure>
+                    <img src="./img/toss-banner-mobile.jpg" alt="토스 띠배너 mobile">
+                </figure>
+            </div>
+        </div>
+
+        <!-- 리뷰 팝업 -->
+        <div class="popup">
+            <div class="popup-ctl">
+                <p>리뷰 상세 보기</p>
+                <span class="popup-close"><img src="./img/close.svg" alt="닫기 버튼"></span>
+            </div>
+            <div class="product-info">
+                <figure><img src="./img/lip-list-img-1.jpg" alt="롬앤 글래스팅 컬러 글로스 사진"></figure>
+                <div class="product-info-txt">
+                    <p>롬앤 글래스팅 컬러 글로스</p>
+                    <span><img src="./img/star-off.svg" alt="별점 아이콘">4.8 (358)</span>
+                </div>
+            </div>
+            <div class="thumbnail-big"><img src="./img/review1.jpg" alt="리뷰 사진 1"></div>
+            <ul class="thumbnail-small">
+                <li><img src="./img/review1-1.jpg" alt="리뷰 사진 2"></li>
+                <li><img src="./img/review1-2.jpg" alt="리뷰 사진 3"></li>
+            </ul>
+            <div class="reviewer-info">
+                <p class="reviewer">김*자</p>
+                <div class="moreinfo">
+                    <p class="date">2026.08.27</p>
+                    <p>구매옵션: 피오니 발레</p>
+                </div>
+            </div>
+            <div class="stars">
+                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+            </div>
+            <p class="review-txt">
+                진짜 너무 예뻐요... 여쿨라라면 무조건 품어야 하는 컬러입니다! 탁기 없이 맑고 뽀용한 피오니 핑크 컬러인데, 입술에 올리면 과하지 않게 자연스럽게 스며들면서 유리알 광택이 촤르르
+                올라와요.
+                생얼에 이것만 슥 얹어줘도 얼굴에 확 생기가 도는 느낌이라 요즘 매일 들고 다닙니다.
+            </p>
+            <div class="review-react">
+                <div class="like-coment">
+                    <div class="like">
+                        <img src="./img/like-icon.svg" alt="유용해요 아이콘">
+                        <p>유용해요 <span>10</span></p>
+                    </div>
+                    <div class="coment">
+                        <img src="./img/coment-icon.svg" alt="댓글 아이콘">
+                        <p>댓글 <span>3</span></p>
+                    </div>
+                </div>
+                <div class="block">
+                    <p>신고 &middot; 차단</p>
+                </div>
+            </div>
+            <div class="total-coment">
+                댓글 <span>1</span>
+            </div>
+        </div>
+
+        <!-- 리뷰 슬라이더 -->
+        <div class="product-review pc-pad">
+            <div class="review-summary">
+                <div class="review-star">
+                    <img src="./img/yellow-star.svg" alt="별점 아이콘" class="star">
+                    <p>4.8</p>
+                </div>
+                <span>&middot;</span>
+                <div class="review-count">
+                    <p>리뷰 358개</p>
+                </div>
+            </div>
+            <div class="review-safisfacion">
+                <img src="./img/review-heart.svg" alt="만족도 하트 아이콘" class="heart">
+                <p>구매자의 <span>95%</span>가 만족한 상품이에요</p>
+            </div>
+            <div class="review-slider-wrap">
+                <div class="review-slider">
+                    <div class="slider-button prev">
+                        <img src="./img/left-arrow.svg" alt="이전 리뷰 보기 버튼" class="slider-button-icon">
+                    </div>
+                    <div class="inner-frame">
+                        <div class="slider-station">
+                            <ul class="slider-train">
+                                <li class="review-card popup-open">
+                                    <div class="inner-frame">
+                                        <div class="review-txt">
+                                            <div class="stars">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                            </div>
+                                            <p>진짜 너무 예뻐요... 여쿨라라면 무조건 품어야 하는 컬러입니다! 탁기 없이 맑고 뽀용한 피오니 핑크 컬러인데, 입술에 올리면
+                                                과하지 않게
+                                                자연스럽게 스며들면서 유리알 광택이 촤르르 올라와요. 생얼에 이것만 슥 얹어줘도 얼굴에 확 생기가 도는 느낌이라 요즘 매일 들고
+                                                다닙니다.
+                                            </p>
+                                        </div>
+                                        <figure class="review-img">
+                                            <img src="./img/review1.jpg" alt="상품리뷰 1 이미지">
+                                        </figure>
+                                    </div>
+                                    <div class="reviewer-info">
+                                        <p class="reviewer">김*자</p>
+                                        <div class="moreinfo">
+                                            <p class="date">2026.08.27</p>
+                                            <p>구매옵션: 피오니 발레</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="review-card popup-open">
+                                    <div class="inner-frame">
+                                        <div class="review-txt">
+                                            <div class="stars">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                            </div>
+                                            <p>매트한 틴트 전체적으로 얇게 깔아준 다음에 입술 중앙 위주로 피오니 발레 얹어줬는데 진짜 대박이에요. 글로스 자체의 투명하고 밀키한
+                                                느낌
+                                                덕분에
+                                                입술이 훨씬 도톰해 보이고 입체감이 살아납니다. 끈적거리는 점성이 아니라 쫀쫀하게 밀착되는 제형이라 립 레이어드하기 너무 좋아요
+                                            </p>
+                                        </div>
+                                        <figure class="review-img">
+                                            <img src="./img/review2.jpg" alt="상품리뷰 2 이미지">
+                                        </figure>
+                                    </div>
+                                    <div class="reviewer-info">
+                                        <p class="reviewer">홍*동</p>
+                                        <div class="moreinfo">
+                                            <p class="date">2026.08.27</p>
+                                            <p>구매옵션: 피오니 발레</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="review-card popup-open">
+                                    <div class="inner-frame">
+                                        <div class="review-txt">
+                                            <div class="stars">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-off.svg" alt="상품 별점 아이콘">
+                                            </div>
+                                            <p>끈적이는 립글로스를 정말 싫어해서 틴트만 쓰다가 롬앤 제품 평이 좋아서 속는 셈 치고 구매해 봤어요. 결론은 대만족! 머리카락이
+                                                쩍쩍 붙는
+                                                무거운
+                                                끈적임이 아니라 탱글하고 촉촉한 코팅감만 남아서 입술이 정말 편안해요. 투명감 있는 발색이라 웜톤인 저한테도 크게 둥둥 뜨지 않고
+                                                맑게
+                                                어우러집니다.</p>
+                                        </div>
+                                        <figure class="review-img">
+                                            <img src="./img/review3.jpg" alt="상품리뷰 3 이미지">
+                                        </figure>
+                                    </div>
+                                    <div class="reviewer-info">
+                                        <p class="reviewer">오*연</p>
+                                        <div class="moreinfo">
+                                            <p class="date">2026.04.21</p>
+                                            <p>구매옵션: 딥 브로</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="review-card popup-open">
+                                    <div class="inner-frame">
+                                        <div class="review-txt">
+                                            <div class="stars">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-off.svg" alt="상품 별점 아이콘">
+                                            </div>
+                                            <p>꾸안꾸 메이크업이나 파데만 가볍게 한 날 바르려고 샀는데 완전 찰떡이에요. 흰기 도는 밀키 핑크인데 부담스럽지 않고 은은하게 혈색을
+                                                주면서
+                                                입술
+                                                주름을 매끈하게 메워줍니다. 향도 상큼달달해서 바를 때마다 기분 좋아져요. 다 쓰면 무조건 재구매할 예정입니다.</p>
+                                        </div>
+                                        <figure class="review-img">
+                                            <img src="./img/review4.jpg" alt="상품리뷰 4 이미지">
+                                        </figure>
+                                    </div>
+                                    <div class="reviewer-info">
+                                        <p class="reviewer">이*빈</p>
+                                        <div class="moreinfo">
+                                            <p class="date">2026.11.10</p>
+                                            <p>구매옵션: 그레이쉬 베이지</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="review-card popup-open">
+                                    <div class="inner-frame">
+                                        <div class="review-txt">
+                                            <div class="stars">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-off.svg" alt="상품 별점 아이콘">
+                                            </div>
+                                            <p>팁이 부드럽고 말랑해서 입술 라인 따라 바르기 너무 편해요. 한번 슥 그어주면 입술 플럼핑 효과를 준 것처럼 볼륨감이 탱글하게
+                                                차오르는데,
+                                                시간이
+                                                지나도 광택이 쉽게 날아가지 않고 오래 유지되는 편입니다. 패키지도 투명한 핑크빛이라 가방에 넣어둘 때마다 기분 좋아져요!</p>
+                                        </div>
+                                        <figure class="review-img">
+                                            <img src="./img/review5.jpg" alt="상품리뷰 5 이미지">
+                                        </figure>
+                                    </div>
+                                    <div class="reviewer-info">
+                                        <p class="reviewer">조*민</p>
+                                        <div class="moreinfo">
+                                            <p class="date">2026.05.07</p>
+                                            <p>구매옵션: 로즈 핑크</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="review-card popup-open">
+                                    <div class="inner-frame">
+                                        <div class="review-txt">
+                                            <div class="stars">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-off.svg" alt="상품 별점 아이콘">
+                                            </div>
+                                            <p>매트한 틴트 전체적으로 얇게 깔아준 다음에 입술 중앙 위주로 피오니 발레 얹어줬는데 진짜 대박이에요. 글로스 자체의 투명하고 밀키한
+                                                느낌
+                                                덕분에
+                                                입술이 훨씬 도톰해 보이고 입체감이 살아납니다. 끈적거리는 점성이 아니라 쫀쫀하게 밀착되는 제형이라 립 레이어드하기 너무 좋아요.
+                                            </p>
+                                        </div>
+                                        <figure class="review-img">
+                                            <img src="./img/review6.jpg" alt="상품리뷰 6 이미지">
+                                        </figure>
+                                    </div>
+                                    <div class="reviewer-info">
+                                        <p class="reviewer">이*림</p>
+                                        <div class="moreinfo">
+                                            <p class="date">2026.09.07</p>
+                                            <p>구매옵션: 피오니 발레</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="slider-button next">
+                        <a href="#"><img src="./img/right-arrow.svg" alt="다음 리뷰 보기 버튼" class="slider-button-icon"></a>
+                    </div>
+                </div>
+                <div class="review-pagination">
+                    <img src="./img/review-dot-on.svg" alt="리뷰 페이지네이션 아이콘">
+                    <img src="./img/review-dot-off.svg" alt="리뷰 페이지네이션 아이콘">
+                    <img src="./img/review-dot-off.svg" alt="리뷰 페이지네이션 아이콘">
+                </div>
+            </div>
+            <div class="product-review-more">
+                <a href="#">리뷰 더보기</a>
+            </div>
+        </div>
+        <div class="product-review mo">
+            <div class="review-summary">
+                <div class="review-star">
+                    <img src="./img/yellow-star.svg" alt="별점 아이콘" class="star">
+                    <p>4.8</p>
+                </div>
+                <span>&middot;</span>
+                <div class="review-count">
+                    <p>리뷰 358개</p>
+                </div>
+            </div>
+            <div class="review-safisfacion">
+                <img src="./img/review-heart.svg" alt="만족도 하트 아이콘" class="heart">
+                <p>구매자의 <span>95%</span>가 만족한 상품이에요</p>
+            </div>
+            <div class="review-slider-wrap">
+                <div class="review-slider">
+                    <div class="slider-button prev">
+                        <img src="./img/left-arrow.svg" alt="이전 리뷰 보기 버튼" class="slider-button-icon">
+                    </div>
+                    <div class="inner-frame">
+                        <div class="slider-station">
+                            <ul class="slider-train">
+                                <li class="review-card popup-open">
+                                    <div class="inner-frame">
+                                        <div class="review-txt">
+                                            <div class="stars">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                            </div>
+                                            <p>진짜 너무 예뻐요... 여쿨라라면 무조건 품어야 하는 컬러입니다! 탁기 없이 맑고 뽀용한 피오니 핑크 컬러인데, 입술에 올리면
+                                                과하지 않게
+                                                자연스럽게 스며들면서 유리알 광택이 촤르르 올라와요. 생얼에 이것만 슥 얹어줘도 얼굴에 확 생기가 도는 느낌이라 요즘 매일 들고
+                                                다닙니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="smart-reviewer-info">
+                                        <div class="smart-inner-frame">
+                                            <p class="reviewer">김*자</p>
+                                            <div class="moreinfo">
+                                                <p class="date">2026.08.27</p>
+                                                <p>구매옵션:<br>피오니 발레</p>
+                                            </div>
+                                        </div>
+                                        <figure class="review-img">
+                                            <img src="./img/review1.jpg" alt="상품리뷰 1 이미지">
+                                        </figure>
+                                    </div>
+                                </li>
+                                <li class="review-card popup-open">
+                                    <div class="inner-frame">
+                                        <div class="review-txt">
+                                            <div class="stars">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                            </div>
+                                            <p>매트한 틴트 전체적으로 얇게 깔아준 다음에 입술 중앙 위주로 피오니 발레 얹어줬는데 진짜 대박이에요. 글로스 자체의 투명하고 밀키한
+                                                느낌
+                                                덕분에
+                                                입술이 훨씬 도톰해 보이고 입체감이 살아납니다. 끈적거리는 점성이 아니라 쫀쫀하게 밀착되는 제형이라 립 레이어드하기 너무 좋아요
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="smart-reviewer-info">
+                                        <div class="smart-inner-frame">
+                                            <p class="reviewer">홍*동</p>
+                                            <div class="moreinfo">
+                                                <p class="date">2026.08.27</p>
+                                                <p>구매옵션:<br>피오니 발레</p>
+                                            </div>
+                                        </div>
+                                        <figure class="review-img">
+                                            <img src="./img/review2.jpg" alt="상품리뷰 2 이미지">
+                                        </figure>
+                                    </div>
+                                </li>
+                                <li class="review-card popup-open">
+                                    <div class="inner-frame">
+                                        <div class="review-txt">
+                                            <div class="stars">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-off.svg" alt="상품 별점 아이콘">
+                                            </div>
+                                            <p>끈적이는 립글로스를 정말 싫어해서 틴트만 쓰다가 롬앤 제품 평이 좋아서 속는 셈 치고 구매해 봤어요. 결론은 대만족! 머리카락이
+                                                쩍쩍 붙는
+                                                무거운
+                                                끈적임이 아니라 탱글하고 촉촉한 코팅감만 남아서 입술이 정말 편안해요. 투명감 있는 발색이라 웜톤인 저한테도 크게 둥둥 뜨지 않고
+                                                맑게
+                                                어우러집니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="smart-reviewer-info">
+                                        <div class="smart-inner-frame">
+                                            <p class="reviewer">오*연</p>
+                                            <div class="moreinfo">
+                                                <p class="date">2026.04.21</p>
+                                                <p>구매옵션:<br>딥 브로</p>
+                                            </div>
+                                        </div>
+                                        <figure class="review-img">
+                                            <img src="./img/review3.jpg" alt="상품리뷰 3 이미지">
+                                        </figure>
+                                    </div>
+                                </li>
+                                <li class="review-card popup-open">
+                                    <div class="inner-frame">
+                                        <div class="review-txt">
+                                            <div class="stars">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-off.svg" alt="상품 별점 아이콘">
+                                            </div>
+                                            <p>꾸안꾸 메이크업이나 파데만 가볍게 한 날 바르려고 샀는데 완전 찰떡이에요. 흰기 도는 밀키 핑크인데 부담스럽지 않고 은은하게 혈색을
+                                                주면서
+                                                입술
+                                                주름을 매끈하게 메워줍니다. 향도 상큼달달해서 바를 때마다 기분 좋아져요. 다 쓰면 무조건 재구매할 예정입니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="smart-reviewer-info">
+                                        <div class="smart-inner-frame">
+                                            <p class="reviewer">이*빈</p>
+                                            <div class="moreinfo">
+                                                <p class="date">2026.11.10</p>
+                                                <p>구매옵션:<br>그레이쉬 베이지</p>
+                                            </div>
+                                        </div>
+                                        <figure class="review-img">
+                                            <img src="./img/review4.jpg" alt="상품리뷰 4 이미지">
+                                        </figure>
+                                    </div>
+                                </li>
+                                <li class="review-card popup-open">
+                                    <div class="inner-frame">
+                                        <div class="review-txt">
+                                            <div class="stars">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-off.svg" alt="상품 별점 아이콘">
+                                            </div>
+                                            <p>팁이 부드럽고 말랑해서 입술 라인 따라 바르기 너무 편해요. 한번 슥 그어주면 입술 플럼핑 효과를 준 것처럼 볼륨감이 탱글하게
+                                                차오르는데,
+                                                시간이
+                                                지나도 광택이 쉽게 날아가지 않고 오래 유지되는 편입니다. 패키지도 투명한 핑크빛이라 가방에 넣어둘 때마다 기분 좋아져요!</p>
+                                        </div>
+                                    </div>
+                                    <div class="smart-reviewer-info">
+                                        <div class="smart-inner-frame">
+                                            <p class="reviewer">조*민</p>
+                                            <div class="moreinfo">
+                                                <p class="date">2026.05.07</p>
+                                                <p>구매옵션:<br>로즈 핑크</p>
+                                            </div>
+                                        </div>
+                                        <figure class="review-img">
+                                            <img src="./img/review5.jpg" alt="상품리뷰 5 이미지">
+                                        </figure>
+                                    </div>
+                                </li>
+                                <li class="review-card popup-open">
+                                    <div class="inner-frame">
+                                        <div class="review-txt">
+                                            <div class="stars">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-on.svg" alt="상품 별점 아이콘">
+                                                <img src="./img/star-off.svg" alt="상품 별점 아이콘">
+                                            </div>
+                                            <p>매트한 틴트 전체적으로 얇게 깔아준 다음에 입술 중앙 위주로 피오니 발레 얹어줬는데 진짜 대박이에요. 글로스 자체의 투명하고 밀키한
+                                                느낌
+                                                덕분에
+                                                입술이 훨씬 도톰해 보이고 입체감이 살아납니다. 끈적거리는 점성이 아니라 쫀쫀하게 밀착되는 제형이라 립 레이어드하기 너무 좋아요.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="smart-reviewer-info">
+                                        <div class="smart-inner-frame">
+                                            <p class="reviewer">이*림</p>
+                                            <div class="moreinfo">
+                                                <p class="date">2026.09.07</p>
+                                                <p>구매옵션:<br>피오니 발레</p>
+                                            </div>
+                                        </div>
+                                        <figure class="review-img">
+                                            <img src="./img/review6.jpg" alt="상품리뷰 6 이미지">
+                                        </figure>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="slider-button next">
+                        <a href="#"><img src="./img/right-arrow.svg" alt="다음 리뷰 보기 버튼" class="slider-button-icon"></a>
+                    </div>
+                </div>
+                <div class="review-pagination">
+                    <img src="./img/review-dot-on.svg" alt="리뷰 페이지네이션 아이콘">
+                    <img src="./img/review-dot-off.svg" alt="리뷰 페이지네이션 아이콘">
+                    <img src="./img/review-dot-off.svg" alt="리뷰 페이지네이션 아이콘">
+                </div>
+            </div>
+            <div class="product-review-more">
+                <a href="#">리뷰 더보기</a>
+            </div>
+        </div>
+
+        <!-- 상세페이지 -->
+        <div class="sangpage">
+            <div class="section">
+                <div class="con on"><a href="#">상품 정보</a></div>
+                <div class="con"><a href="#">리뷰 (358)</a></div>
+                <div class="con"><a href="#">문의</a></div>
+            </div>
+            <figure class="pc">
+                <img src="./img/sangpage-pc.jpg" alt="상세페이지 pc">
+            </figure>
+            <figure class="pad">
+                <img src="./img/sangpage-pad.jpg" alt="상세페이지 pad">
+            </figure>
+            <figure class="mobile">
+                <img src="./img/sangpage-mo.jpg" alt="상세페이지 mobile">
+            </figure>
+        </div>
+    </main>
+
+    <!-- 화면 상단으로 이동하는 플로팅 버튼 -->
+    <div class="btn-top" aria-label="화면 상단으로 이동">↑</div>
+
+    <!-- 푸터 -->
+    <footer class="pc">
+        <div class="foot-con1">
+            <figure class="foot-logo">
+                <img src="./img/foot-logo.svg" alt="롬앤 리디자인 푸터 로고 사진">
+            </figure>
+            <ul class="foot-menu">
+                <li><a href="#">이용약관</a></li>
+                <li>|</li>
+                <li><a href="#">개인정보처리 방침</a></li>
+                <li>|</li>
+                <li><a href="#">사업자 정보 확인</a></li>
+            </ul>
+            <div class="copy">© 2026 하이파이프팀 포트폴리오 리디자인 사이트입니다.</div>
+        </div>
+        <div class="con-txt">
+            <div class="foot-con2">
+                <ul class="address">
+                    <li>주소 <span>서울특별시 강남구 도산대로 328</span></li>
+                    <li>사업자번호 <span>777-77-77777</span></li>
+                </ul>
+            </div>
+            <div class="foot-con3">
+                <h4>CUSTOMER CENTER</h4>
+                <p>1588-2026</p>
+                <ul>
+                    <li>평일 <span>09:30 - 18:00</span></li>
+                    <li>점심시간 <span>12:00 - 13:00</span></li>
+                    <li><span>토·일 공휴일 휴무</span></li>
+                </ul>
+            </div>
+            <div class="foot-con4">
+                <h4>FOLLOW US</h4>
+                <p>인스타그램과 유튜브에서 다양한 소식을 만나보세요.</p>
+                <ul class="sns-icon">
+                    <li><a href="#"><img src="./img/kakao.png" alt="롬앤 카카오톡 채널 바로가기"></a></li>
+                    <li><a href="#"><img src="./img/youtube.png" alt="롬앤 유튜브 채널 바로가기"></a></li>
+                    <li><a href="#"><img src="./img/instagram.png" alt="롬앤 인스타그램 계정 바로가기"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 태블릿 + 모바일 공용 푸터 (1024px 이하) -->
+    <div class="pad-footer">
+        <div class="foot-con1">
+            <figure class="foot-logo">
+                <img src="./img/foot-logo.svg" alt="롬앤 리디자인 푸터 로고 사진">
+            </figure>
+            <ul class="foot-menu">
+                <li><a href="#">이용약관</a></li>
+                <li>|</li>
+                <li><a href="#">개인정보처리 방침</a></li>
+                <li>|</li>
+                <li><a href="#">사업자 정보 확인</a></li>
+            </ul>
+            <div class="foot-con2">
+                <ul class="address">
+                    <li>주소 <span>서울특별시 강남구 도산대로 328</span></li>
+                    <li>사업자번호 <span>777-77-77777</span></li>
+                </ul>
+            </div>
+            <div class="copy">© 2026 하이파이프팀 포트폴리오 리디자인 사이트입니다.</div>
+        </div>
+        <div class="foot-con3">
+            <h4>CUSTOMER CENTER</h4>
+            <p>1588-2026</p>
+            <ul>
+                <li>평일 <span>09:30 - 18:00</span></li>
+                <li>점심시간 <span>12:00 - 13:00</span></li>
+                <li><span>토·일 공휴일 휴무</span></li>
+            </ul>
+        </div>
+        <div class="foot-con4">
+            <h4>FOLLOW US</h4>
+            <p>인스타그램과 유튜브에서 다양한 소식을 만나보세요.</p>
+            <ul class="sns-icon">
+                <li><a href="#"><img src="./img/kakao.png" alt="롬앤 카카오톡 채널 바로가기"></a></li>
+                <li><a href="#"><img src="./img/youtube.png" alt="롬앤 유튜브 채널 바로가기"></a></li>
+                <li><a href="#"><img src="./img/instagram.png" alt="롬앤 인스타그램 계정 바로가기"></a></li>
+            </ul>
+        </div>
+    </div>
+<script>document.querySelectorAll('.modal,.popup,.main-popup').forEach(node=>node.remove());</script></body>
+
+</html>
