@@ -1,0 +1,249 @@
+.tool-item img.icon-white {
+  filter: brightness(0) invert(1);
+}
+
+.tool-item img.icon-inverted {
+  filter: invert(1);
+}
+
+.expertise .tool-group>h4 {
+  color: #e5edf4;
+}
+
+.expertise {
+  background: var(--navy);
+  color: #f5f3ed;
+  --line: #f6f7f833;
+}
+
+.expertise .editorial-heading strong {
+  color: #e5edf4;
+}
+
+.tools-workflow {
+  margin: clamp(92px,7.6vw,146px) auto 0;
+  max-width: 1300px;
+  text-align: center;
+}
+
+.tools-workflow>h3 {
+  font-size: var(--tools-title-size);
+  font-weight: 600;
+}
+
+.tools-groups {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.8fr;
+  gap: clamp(24px,3vw,56px);
+  margin-top: 36px;
+}
+
+.tool-group>h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #bac4c9;
+  margin-bottom: 24px;
+}
+
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 18px;
+  justify-content: center;
+}
+
+.tool-item {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  min-width: 64px;
+  font-size: 14px;
+}
+
+.tool-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+@media (max-width: 1100px) {
+  .tools-groups {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tool-group:last-child {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width: 784px) {
+  .tools-groups {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .tool-group:last-child {
+    grid-column: auto;
+  }
+
+  .tool-list {
+    gap: 22px 18px;
+  }
+
+  .tool-group>h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .tool-item img {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tools-groups {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .tool-group:last-child {
+    grid-column: auto;
+  }
+
+  .tool-group:last-child .tool-list {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 24px 8px;
+    justify-items: center;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+
+  .tool-group:last-child .tool-item {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+.expertise-overview {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1.12fr);
+  gap: clamp(48px,7vw,130px);
+  align-items: start;
+  padding-block: 20px 40px;
+}
+
+.expertise-eyebrow {
+  font-size: 11px;
+  letter-spacing: .18em;
+  color: #bac4c9;
+  margin-bottom: 26px;
+}
+
+.expertise-intro h2 {
+  font: 400 clamp(64px,7vw,124px)/1.04 var(--serif);
+  letter-spacing: -.045em;
+  color: #ffffff;
+}
+
+.expertise-intro h2 em {
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.expertise-lead {
+  margin-top: 30px;
+  font-size: clamp(16px,1.35vw,21px);
+  line-height: 1.85;
+  letter-spacing: -.025em;
+  color: #d5dde2;
+}
+
+.expertise-roles {
+  display: grid;
+  gap: 40px;
+  padding-top: 4px;
+}
+
+.expertise-role h3 {
+  font-size: clamp(22px,2.1vw,34px);
+  line-height: 1.25;
+  letter-spacing: -.035em;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.expertise-role p {
+  margin-top: 12px;
+  font-size: clamp(14px,1.15vw,17px);
+  line-height: 1.75;
+  letter-spacing: -.02em;
+  color: #bac4c9;
+  max-width: 440px;
+}
+
+@media (max-width: 900px) {
+  .expertise-overview {
+    gap: 36px;
+    grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr);
+  }
+
+  .expertise-intro h2 {
+    font-size: 64px;
+  }
+
+  .expertise-roles {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .expertise-overview {
+    grid-template-columns: 1fr;
+    gap: 46px;
+    padding-block: 0 16px;
+  }
+
+  .expertise-eyebrow {
+    font-size: 10px;
+    margin-bottom: 18px;
+  }
+
+  .expertise-intro h2 {
+    font-size: clamp(52px,13vw,72px);
+  }
+
+  .expertise-lead {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .expertise-roles {
+    gap: 30px;
+  }
+
+  .expertise-role h3 {
+    font-size: 24px;
+  }
+
+  .expertise-role p {
+    font-size: 14px;
+    margin-top: 9px;
+  }
+}
+
+.tools-intro {
+  margin: 18px auto 0;
+  max-width: 560px;
+  font-size: clamp(14px,1.2vw,18px);
+  line-height: 1.8;
+  letter-spacing: -.02em;
+  color: #bac4c9;
+}
+
+@media (max-width: 480px) {
+  .tools-intro br {
+    display: none;
+  }
+}
