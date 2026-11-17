@@ -218,6 +218,47 @@ em.hero-title-line {
   }
 }
 
+@media (max-width: 784px) {
+  .hero-cover {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 108px;
+  }
+
+  .hero-edition {
+    position: absolute;
+    inset: auto 20px 24px;
+    width: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    opacity: .75;
+  }
+
+  .hero-edition > span { font-size: 11px; line-height: 1.35; }
+  .hero-edition strong { display: block; margin: 0 0 2px; font-weight: 600; }
+  .hero-role { display: block; max-width: none; font-size: 9px; letter-spacing: .04em; }
+  .hero-edition > span:last-child { white-space: nowrap; }
+}
+
+.hero-edition {
+  top: auto;
+  bottom: 32px;
+  align-items: center;
+}
+
+@media (max-width: 784px) {
+  .hero-edition {
+    inset: auto 20px 24px;
+    opacity: .85;
+  }
+}
+
+@media (max-width: 402px) {
+  .hero-edition > span { font-size: 12px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-press-bg { transition: none; }
   .hero-cover.is-pressing .hero-press-bg { transform: none; }
