@@ -30,7 +30,7 @@
 }
 
 .case-tab[aria-pressed="true"] {
-  background: #182e40;
+  background: var(--blue);
   color: #fff;
 }
 
@@ -241,7 +241,7 @@
 }
 
 .case-note:nth-child(2) {
-  background: #182e40;
+  background: var(--blue);
   color: white;
 }
 
@@ -270,7 +270,7 @@
   padding: 8px;
   border: 1px solid #ffffff30;
   border-radius: 999px;
-  background: #182e40;
+  background: var(--blue);
   color: white;
   box-shadow: 0 8px 32px #03182330;
   font: 400 16px/1.5 var(--sans);
@@ -520,7 +520,7 @@
     padding: 12px 24px;
     border: 1px solid #ffffff40;
     border-radius: 999px;
-    background: #182e40;
+    background: var(--blue);
     color: #fff;
     font-size: 14px;
     box-shadow: 0 6px 24px #03182330;
