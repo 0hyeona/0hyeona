@@ -114,3 +114,44 @@
 .poster-info .showcase-caption {
   margin: 0;
 }
+
+@media (max-width: 784px) {
+  .poster-feature { gap: 28px; }
+  .poster-visual {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 12px;
+  }
+  .poster-art {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+  .poster-art img { aspect-ratio: auto; height: auto; }
+  .poster-visual > .round-button { width: 44px; height: 44px; }
+  .poster-visual > .round-button:first-child {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
+  }
+  .poster-visual > .round-button:last-child {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+  }
+  .poster-info { border-top: 0; padding-top: 0; }
+  .poster-info .showcase-caption { min-height: 0; }
+}
+
+@media (max-width: 784px) {
+  .poster-feature {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 12px;
+  }
+  .poster-visual { display: contents; }
+  .poster-info { grid-column: 1 / -1; grid-row: 2; }
+  .poster-visual > .round-button:first-child { grid-row: 3; }
+  .poster-visual > .round-button:last-child { grid-row: 3; }
+}

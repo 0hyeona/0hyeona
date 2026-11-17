@@ -34,12 +34,60 @@
 }
 
 @media (max-width: 784px) {
+  .contact.section-shell {
+    padding: 64px 24px 32px;
+    padding-bottom: max(32px, env(safe-area-inset-bottom));
+  }
+
+  .contact > .content-width > p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #d5dde2;
+  }
+
+  .contact h2 {
+    font-size: clamp(44px, 12vw, 80px);
+    line-height: 1.1;
+    margin: 28px 0 32px;
+  }
+
   .contact-links {
-    font-size: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 18px;
+  }
+
+  .contact-links a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-links a[href^="tel:"] {
+    color: #bac4c9;
+    font-size: 16px;
   }
 
   .contact footer {
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 16px;
+    gap: 12px 20px;
     font-size: 12px;
     flex-wrap: wrap;
   }
+
+  .contact footer a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 320px) {
+  .contact.section-shell { padding-inline: 20px; }
+  .contact footer { flex-direction: column; align-items: flex-start; gap: 8px; }
 }

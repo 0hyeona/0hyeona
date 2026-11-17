@@ -174,6 +174,50 @@ em.hero-title-line {
   .hero-edition { font-size: 14px; }
 }
 
+@media (max-width: 402px) {
+  .hero-cover {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: center;
+    gap: 40px;
+    height: auto;
+    min-height: min(640px, 100svh);
+    padding: calc(max(12px, env(safe-area-inset-top)) + 76px) 20px 40px;
+  }
+
+  .hero-edition {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .hero-edition > span { font-size: 12px; }
+  .hero-edition > span:last-child { white-space: nowrap; }
+  .hero-edition strong { margin-bottom: 4px; }
+  .hero-role { max-width: 190px; font-size: 10px; }
+
+  .hero-banner-copy { min-width: 0; padding-block: 16px; }
+
+  .hero-cover h1 {
+    font-size: clamp(40px, 20vw, 80px);
+    line-height: .98;
+  }
+
+  .hero-banner-subtitle {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .hero-intro-detail {
+    max-width: 290px;
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-press-bg { transition: none; }
   .hero-cover.is-pressing .hero-press-bg { transform: none; }

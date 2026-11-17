@@ -231,3 +231,38 @@
 .project-status { display:inline-block; margin-top:8px; font-size:16px; color:#718591; }
 @media(max-width:1040px) { .project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:540px) { .project-grid { grid-template-columns:minmax(0,1fr); gap:32px; } }
+
+@media (max-width: 784px) {
+  .work.section-shell { padding-inline: 20px; }
+  .work-gallery { padding-block: 56px; scroll-margin-top: 88px; }
+  .gallery-content { min-width: 0; }
+  .panel-heading { text-align: center; margin-bottom: 32px; }
+  .panel-heading h3 {
+    font-size: clamp(24px, 7vw, 28px);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+  .panel-heading p { font-size: 16px; }
+  .showcase-caption {
+    margin: 24px 0 0;
+    min-height: 0;
+    overflow-wrap: anywhere;
+  }
+  .showcase-caption h4 { font-size: 22px; }
+  .showcase-caption p { margin-top: 18px; font-size: 16px; line-height: 1.75; }
+  .work-switcher nav { min-width: 0; width: min(260px, calc(100vw - 32px)); }
+  .work-switcher a { gap: 8px; font-size: 14px; }
+  .work-switcher a > span { display: none; }
+}
+
+@media (max-width: 784px) {
+  .panel-heading .section-number {
+    padding: 5px 18px;
+    border: 1px solid #84a9c0;
+    border-radius: 999px;
+    font-size: 16px;
+    letter-spacing: normal;
+  }
+  .panel-heading h3 { margin: 16px 0 20px; }
+  .panel-heading p { color: #536c7b; text-wrap: pretty; }
+}

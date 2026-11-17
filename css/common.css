@@ -300,6 +300,23 @@ a:focus-visible,
   }
 }
 
+@media (max-width: 402px) {
+  .floating-nav {
+    top: max(12px, env(safe-area-inset-top));
+    width: calc(100% - 32px);
+    max-width: 354px;
+    gap: 0;
+    padding: 4px;
+  }
+
+  .floating-nav a {
+    flex: 1;
+    min-width: 0;
+    padding-inline: 4px;
+    font-size: 12px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

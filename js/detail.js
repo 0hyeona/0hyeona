@@ -1,3 +1,4 @@
+import { createDetailSheet } from './detail-sheet.js';
 import { $, arrow, element, reduceMotion, wrap } from './dom.js';
 
 const items = [
@@ -58,8 +59,11 @@ function mountDetails(parent) {
   head.append(heading, controls);
   tabs.setAttribute('role', 'group');
   tabs.setAttribute('aria-label', '상세페이지 프로젝트 선택');
+  const shortNames = ['루노라 로션', '바디필로우', 'OA 청소기'];
   const buttons = items.map((item, i) => {
     const button = element('button', 'case-tab', item[1]);
+    button.replaceChildren(element('span', 'case-tab-long', item[1]), element('span', 'case-tab-short', shortNames[i]));
+    button.setAttribute('aria-label', item[1]);
     button.type = 'button';
     button.addEventListener('click', () => show(i));
     tabs.append(button);
@@ -68,15 +72,21 @@ function mountDetails(parent) {
   const layout = element('div', 'case-layout'), visual = element('figure', 'case-visual'), img = element('img'), imageNote = element('figcaption', '', 'FULL DESIGN — 전체 상세페이지'), notes = element('div', 'case-editorial');
   img.loading = 'lazy';
   img.decoding = 'async';
-  visual.append(img, imageNote);
+  const preview = element('div', 'case-preview');
+  preview.id = 'detail-image-preview';
+  preview.setAttribute('aria-label', '상세페이지 미리보기');
+  preview.append(img);
+  visual.append(preview, imageNote);
   layout.append(visual, notes);
   root.append(tabs, head, layout);
   parent.append(root);
+  const sheet = createDetailSheet(root);
   function show(value) {
     active = wrap(value, items.length);
     const [source, name, description, data = {}] = items[active];
     title.textContent = name;
     meta.textContent = (data.brand || '') + ' / 상세페이지 디자인';
+    sheet.update(name, description, data);
     img.src = './img/' + source;
     img.alt = name + ' 전체 상세페이지';
     buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === active)));
@@ -107,7 +117,14 @@ const detailCase = document.querySelector('.detail-case-study');
 if (detailCase) {
   const dock = detailCase.querySelector('.case-controls');
   dock.classList.add('case-dock');
-  document.body.append(dock);
+  const mobileDetails = matchMedia('(max-width: 784px)');
+  const placeControls = () => {
+    (mobileDetails.matches ? detailCase : document.body).append(dock);
+    dock.classList.toggle('is-inline', mobileDetails.matches);
+    const preview = detailCase.querySelector('.case-preview');
+    preview.removeAttribute('tabindex');
+  };
+  placeControls();
   const buttons = dock.querySelectorAll('button');
   buttons.forEach((button, index) => {
     button.textContent = index ? '\u2192' : '\u2190';
@@ -119,12 +136,13 @@ if (detailCase) {
   dock.insertBefore(label, buttons[1]);
   const updateDock = () => {
     const rect = detailCase.getBoundingClientRect();
-    dock.hidden = rect.top > innerHeight * .65 || rect.bottom < 180;
+    dock.hidden = !mobileDetails.matches && (rect.top > innerHeight * .65 || rect.bottom < 180);
     label.textContent = detailCase.querySelector('h4').textContent;
   };
   new MutationObserver(updateDock).observe(detailCase.querySelector('h4'), { childList: true, subtree: true, characterData: true });
   addEventListener('scroll', updateDock, { passive: true });
   addEventListener('resize', updateDock, { passive: true });
+  mobileDetails.addEventListener('change', () => { placeControls(); updateDock(); });
   updateDock();
 }
 // A separate sticky frame keeps the scaled notes' layout height accurate.
@@ -134,7 +152,7 @@ if (caseNotes) {
   caseNotes.before(frame);
   frame.append(caseNotes);
   const sizeCaseNotes = () => {
-    if (innerWidth <= 640) {
+    if (innerWidth <= 784) {
       frame.style.cssText = '';
       caseNotes.style.transform = '';
       return;

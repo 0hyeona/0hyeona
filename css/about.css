@@ -4,98 +4,61 @@
 
 .about-composition {
   display: grid;
-  grid-template-columns: minmax(0,1.15fr) minmax(240px,.85fr);
-  gap: clamp(48px,5vw,96px);
-  align-items: end;
-  margin-top: clamp(60px,5.8vw,112px);
+  grid-template-columns: clamp(220px, 20vw, 300px) minmax(0, 1fr);
+  gap: clamp(40px, 5vw, 80px);
+  align-items: center;
+  margin-top: clamp(48px, 4vw, 76px);
 }
 
-.profile-visual {
-  width: min(100%,880px);
-  aspect-ratio: 1.35;
-  position: relative;
-  isolation: isolate;
-}
+.profile-visual { width: 100%; }
 
-.portrait-frame {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 56%;
-  height: 90%;
-  padding: 14px 14px 30px;
-  background: #fff;
-  box-shadow: 0 0 0 1px #dfe5e8,0 10px 22px #0928390c;
-}
+.portrait-frame { margin: 0; }
 
 .portrait-frame img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
 }
 
-.portrait-frame figcaption {
-  position: absolute;
-  bottom: 8px;
-  left: 14px;
-  font-size: 11px;
-  letter-spacing: .08em;
-  color: #63717b;
-}
+.portrait-frame figcaption,
+.profile-card,
+.about-scope { display: none; }
 
-.profile-card {
-  position: absolute;
-  left: 45%;
-  top: 29%;
-  width: 55%;
-  min-height: 65%;
-  background: #f0f5f7f2;
-  border: 1px solid #d7e3e9;
-  padding: clamp(20px,2vw,38px);
+.about-personal {
   display: flex;
   flex-direction: column;
-  backdrop-filter: blur(8px);
-  color: #102d42;
+  align-items: flex-start;
+  gap: 20px;
+  min-width: 0;
 }
 
-.profile-card-index {
-  font-size: clamp(10px,.8vw,14px);
-  letter-spacing: .08em;
-  color: #5f7b8d;
+.about-personal h3 {
+  font-size: clamp(28px, 2.5vw, 40px);
+  line-height: 1.35;
+  letter-spacing: -.03em;
 }
 
-.profile-card h3 {
-  font-size: clamp(22px,1.771vw,34px);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -.04em;
-  margin-top: 16px;
+.about-personal h3 span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .06em;
+  color: var(--muted);
 }
 
-.profile-card>p {
-  font-size: clamp(14px,1.15vw,20px);
-  line-height: 1.5;
-  margin-top: 12px;
-}
-
-.profile-card-contact {
-  display: grid;
-  gap: 5px;
-  margin-top: auto;
-  padding-top: 26px;
-  font-size: clamp(12px,1.05vw,18px);
-  word-break: normal;
-  overflow-wrap: anywhere;
-}
-
-.about-scope {
-  justify-self: end;
+.about-mbti {
   color: var(--blue);
-  text-align: right;
-  font-size: var(--about-scope-size);
+  font-size: 18px;
   font-weight: 600;
-  line-height: 1.28;
-  margin-bottom: clamp(44px,4.5vw,86px);
+}
+
+.about-personal a {
+  max-width: 100%;
+  font-size: 18px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 .about-summary {
@@ -144,54 +107,83 @@
 
 @media (max-width: 784px) {
   .about-composition {
-    display: block;
-    margin-top: 48px;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: clamp(16px, 4vw, 32px);
+    margin-top: 36px;
   }
 
   .profile-visual {
-    width: min(100%,600px);
-    margin-inline: auto;
+    width: 100%;
+    max-width: 180px;
+    aspect-ratio: auto;
   }
 
   .profile-card {
-    padding: 18px 12px;
-  }
-
-  .profile-card h3 {
-    font-size: clamp(16px,3.8vw,26px);
-    margin-top: 10px;
-  }
-
-  .profile-card-index {
-    font-size: 8px;
-  }
-
-  .profile-card>p {
-    font-size: 11px;
-    margin-top: 8px;
-  }
-
-  .profile-card-contact {
-    font-size: 10px;
-    padding-top: 16px;
+    display: none;
   }
 
   .portrait-frame {
-    padding: 10px 10px 24px;
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .portrait-frame img {
+    height: auto;
+    aspect-ratio: 3 / 4;
   }
 
   .portrait-frame figcaption {
-    font-size: 8px;
-    left: 10px;
+    display: none;
   }
 
   .about-scope {
+    display: none;
+  }
+
+  .about-personal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .about-personal h3 {
+    font-size: clamp(20px, 4vw, 28px);
+    line-height: 1.35;
+    letter-spacing: -.03em;
+  }
+
+  .about-personal h3 span {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: .06em;
+    color: var(--muted);
+  }
+
+  .about-mbti {
+    color: var(--blue);
     font-size: 14px;
-    margin: 32px 0 0;
+    font-weight: 600;
+  }
+
+  .about-personal a {
+    max-width: 100%;
+    font-size: clamp(12px, 2.5vw, 16px);
+    line-height: 1.5;
+    overflow-wrap: anywhere;
   }
 
   .about-summary {
-    margin-top: 48px;
+    margin-top: 28px;
+    line-height: 1.75;
   }
 
   .about-summary br {
