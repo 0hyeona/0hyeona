@@ -108,6 +108,7 @@ function mountDetails(parent) {
       notes.append(flow);
     }
   }
+  sheet.setNavigate(delta => { show(active + delta); });
   prev.addEventListener('click', () => show(active - 1));
   next.addEventListener('click', () => show(active + 1));
   show(0);

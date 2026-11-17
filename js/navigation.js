@@ -1,12 +1,13 @@
 import { $, $$ } from './dom.js';
 
 const categoryOrder = ['uxui', 'banner', 'popup', 'poster', 'detail', 'notion'];
-const categoryNames = { uxui: 'UX/UI 프로젝트', banner: '배너 디자인', popup: '팝업', poster: '포스터', detail: 'DETAIL PAGE DESIGN', notion: '공부 기록' };
+const categoryNames = { uxui: 'UX/UI Projects', banner: 'Banners', popup: 'Popups', poster: 'Posters', detail: 'Detail Pages', notion: 'Study Notes' };
 // Keep category navigation within reach while browsing the work sections.
-const workSwitcher = $('#work-switcher'), workChoices = $$('#work-switcher a');
-workChoices.forEach(link => link.addEventListener('click', () => {
+const workSwitcher = $('#work-switcher'), workChoices = $$('#work-switcher a[href$="-showcase"]');
+$$('#work-switcher a').forEach(link => link.addEventListener('click', () => {
   workSwitcher.open = false;
-  $(link.getAttribute('href')).focus({ preventScroll: true });
+  const target = $(link.getAttribute('href'));
+  if (target.hasAttribute('tabindex')) target.focus({ preventScroll: true });
 }));
 document.addEventListener('click', event => {
   if (!workSwitcher.contains(event.target))
@@ -20,12 +21,12 @@ workSwitcher.addEventListener('keydown', event => {
 });
 
 function updateWorkSwitcher() {
-  const work = $('#work').getBoundingClientRect(), show = work.top <= 100 && work.bottom > 120;
+  const work = $('#work').getBoundingClientRect(), inWork = work.top <= 100 && work.bottom > 120, show = true;
   if (!show && workSwitcher.contains(document.activeElement)) {
     workSwitcher.open = false;
-    $('#floating-nav a[href="#work"]').focus({ preventScroll: true });
+    $('#work-switcher summary').focus({ preventScroll: true });
   }
-  workSwitcher.hidden = !show;
+  workSwitcher.hidden = false;
   if (!show) {
     workSwitcher.open = false;
     return;
@@ -34,17 +35,23 @@ function updateWorkSwitcher() {
   $('#work-switcher-current').textContent = categoryNames[current];
   $('#work-switcher summary').setAttribute('aria-label', '작업 카테고리 선택, 현재 ' + categoryNames[current]);
   workChoices.forEach(link => {
-    if (link.getAttribute('href') === '#' + current + '-showcase')
+    if (inWork && link.getAttribute('href') === '#' + current + '-showcase')
       link.setAttribute('aria-current', 'location');
     else
       link.removeAttribute('aria-current');
   });
 }
+const categoryToggle = $('#work-switcher .work-submenu-heading button');
+categoryToggle.addEventListener('click', () => {
+  const expanded = categoryToggle.getAttribute('aria-expanded') !== 'true';
+  categoryToggle.setAttribute('aria-expanded', String(expanded));
+  $('#work-category-links').hidden = !expanded;
+});
 // Existing query links continue to open the corresponding anchored gallery.
 const requestedCategory = new URLSearchParams(location.search).get('work');
 if (categoryOrder.includes(requestedCategory) && !location.hash)
   location.hash = requestedCategory + '-showcase';
-const navLinks = $$('#floating-nav a'), navSections = navLinks.map(a => $(a.getAttribute('href')));
+const navLinks = $$('#work-switcher nav > a, #work-switcher .work-submenu-heading > a'), navSections = navLinks.map(a => $(a.getAttribute('href')));
 let scrollQueued = false;
 
 function updateScroll() {

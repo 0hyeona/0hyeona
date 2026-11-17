@@ -527,3 +527,25 @@
     white-space: nowrap;
   }
 }
+
+.detail-sheet-navigation { display: none; }
+@media (max-width: 784px) {
+  .case-dock.is-inline { display: none; }
+  .detail-sheet-trigger { background: var(--blue); border-color: #ffffff50; }
+  .detail-sheet-navigation {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 0 20px 24px;
+  }
+  .detail-sheet-navigation button {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #b9d3e2;
+    border-radius: 50%;
+    color: var(--blue);
+    font-size: 24px;
+  }
+}

@@ -23,30 +23,34 @@
 </head>
 <body>
   <a class="skip-link" href="#work">본문 바로가기</a>
-  <nav class="floating-nav" id="floating-nav" aria-label="페이지 메뉴">
-    <a href="#home" aria-current="location">Home</a><a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a>
-  </nav>
   <details class="work-switcher" id="work-switcher" hidden>
     <summary aria-label="작업 카테고리 선택, 현재 UX/UI 프로젝트" title="작업 카테고리 선택">
       <svg class="switcher-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
       <span class="visually-hidden" id="work-switcher-current">UX/UI 프로젝트</span>
     </summary>
-    <nav aria-label="작업 카테고리 선택">
-      <a href="#uxui-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M8 9v11m4-7h6m-6 4h4"/></svg>UX/UI 프로젝트 <span>UX/UI</span></a>
-      <a href="#banner-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h6m-6 4h4m6-4h2v4h-2z"/></svg>배너 <span>Banner</span></a>
-      <a href="#popup-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 8h18m-4-3 2 2m0-2-2 2M7 12h10m-10 4h7"/></svg>팝업 <span>Popup</span></a>
-      <a href="#poster-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="10" cy="8" r="1.5"/><path d="m7 16 4-4 6 6M8 20h8"/></svg>포스터 <span>Poster</span></a>
-      <a href="#detail-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 5h8v5H8zm0 9h8m-8 3h8m-8 3h5"/></svg>상세페이지 <span>Detail Page</span></a>
-      <a href="#notion-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5c3-1 6-1 9 1v15c-3-2-6-2-9-1V5Zm18 0c-3-1-6-1-9 1v15c3-2 6-2 9-1V5Z"/></svg>공부 기록 <span>Notion</span></a>
+    <nav aria-label="섹션 바로가기">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#expertise">What I do</a>
+      <div class="work-submenu">
+        <div class="work-submenu-heading"><a href="#work">Work Archive</a><button type="button" aria-label="Toggle work categories" aria-controls="work-category-links" aria-expanded="false"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></div>
+        <div class="work-category-links" id="work-category-links" hidden>
+      <a href="#uxui-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M8 9v11m4-7h6m-6 4h4"/></svg>UX/UI Projects <span>UX/UI Projects</span></a>
+      <a href="#banner-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h6m-6 4h4m6-4h2v4h-2z"/></svg>Banners <span>Banners</span></a>
+      <a href="#popup-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 8h18m-4-3 2 2m0-2-2 2M7 12h10m-10 4h7"/></svg>Popups <span>Popups</span></a>
+      <a href="#poster-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="10" cy="8" r="1.5"/><path d="m7 16 4-4 6 6M8 20h8"/></svg>Posters <span>Posters</span></a>
+      <a href="#detail-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 5h8v5H8zm0 9h8m-8 3h8m-8 3h5"/></svg>Detail Pages <span>Detail Pages</span></a>
+      <a href="#notion-showcase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5c3-1 6-1 9 1v15c-3-2-6-2-9-1V5Zm18 0c-3-1-6-1-9 1v15c3-2 6-2 9-1V5Z"/></svg>Study Notes <span>Study Notes</span></a>
+        </div>
+      </div>
+      <a href="#contact">Contact</a>
     </nav>
   </details>
   <main>
     <div class="hero-scroll" id="hero-scroll">
       <section class="hero-cover" id="home" aria-labelledby="hero-title">
-        <div class="hero-edition"><span><strong>KIM HYEONA</strong><span class="hero-role">UX/UI DESIGNER &amp; WEB PUBLISHER</span></span><span>© 2026</span></div>
+        <div class="hero-edition"><span>KIM HYEONA</span><span>UX/UI DESIGNER</span></div>
         <div class="hero-banner-copy">
           <h1 id="hero-title"><span class="hero-title-line">Design that</span> <em class="hero-title-line">connects.</em></h1>
-          <p class="hero-banner-subtitle">디자인을 이해하고, 웹으로 구현하는<br class="hero-mobile-break"> UX/UI 디자이너 김현아입니다.</p>
+          <p class="hero-banner-subtitle">생각을 경험으로, 경험을 현실로 만드는<br>UX/UI 디자이너 김현아입니다.</p>
           <p class="hero-intro-detail">사용자 흐름을 설계하고, 시각 디자인부터 반응형 화면 구현까지 연결합니다.</p>
         </div>
         <div class="hero-press-bg" aria-hidden="true"></div>

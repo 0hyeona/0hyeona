@@ -18,10 +18,20 @@ export function createDetailSheet(root) {
   close.autofocus = true;
   header.append(title, close);
   const body = element('div', 'detail-sheet-body');
-  dialog.append(header, body);
+  const navigation = element('div', 'detail-sheet-navigation');
+  const previous = element('button', '', '←');
+  const next = element('button', '', '→');
+  previous.type = next.type = 'button';
+  previous.setAttribute('aria-label', '이전 상세페이지');
+  next.setAttribute('aria-label', '다음 상세페이지');
+  navigation.append(previous, next);
+  dialog.append(header, body, navigation);
   document.body.append(trigger, dialog);
   let savedY = 0;
   let savedStyle;
+  let navigate = () => {};
+  previous.addEventListener('click', () => navigate(-1));
+  next.addEventListener('click', () => navigate(1));
 
   function visibility() {
     const rect = root.getBoundingClientRect();
@@ -65,8 +75,8 @@ export function createDetailSheet(root) {
   }
 
   return {
+    setNavigate(callback) { navigate = callback; },
     update(name, description, data) {
-      if (dialog.open) dialog.close();
       title.textContent = name;
       body.replaceChildren();
       const intro = element('section', 'detail-sheet-intro');
@@ -82,6 +92,7 @@ export function createDetailSheet(root) {
         });
         body.append(accordion('콘텐츠 흐름', list));
       }
+      if (dialog.open) dialog.scrollTop = 0;
       visibility();
     }
   };
